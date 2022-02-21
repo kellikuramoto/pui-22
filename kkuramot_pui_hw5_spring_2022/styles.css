@@ -1,0 +1,119 @@
+nav {
+    font-size: 24px;
+    text-align: center;
+    background: #361706;
+    padding: 2%;
+}
+
+#nav-left-align {
+    display: inline;
+    float: left;
+}
+
+#nav-right-align {
+    display: inline;
+    float: right;
+}
+
+nav a {
+    color: #E6E5E0;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #E6E5E0;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#brand {
+    color: #E6E5E0;
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+#cart {
+    width: 30px;
+}
+
+#homepage {
+    font-family: 'DM Sans', sans-serif;
+    background-image: url('images/homepage.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+#products {
+    font-family: 'DM Sans', sans-serif;
+    background-image: url('images/wallpaper.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+#cta_container {
+    width: 40%;
+    float: right;
+}
+
+#calltoaction {
+    background: #603F2D;
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 24px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    padding: 5%;
+    color: #E6E5E0;
+}
+
+#shop {
+    font-size: 24px;
+    color: #E6E5E0;
+    display: block;
+    border: non;
+}
+
+.coffee1, .coffee2, .coffee3, .coffee4 {
+    height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 200px;
+    padding: 20px;
+}
+
+th, td {
+    border: 1px dashed;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px;
+}
+
+#product_description p{
+    font-family: 'DM Sans', sans-serif;
+    color: #361706;
+    text-align: center;
+}
+
+#product_description a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#product_name {
+    font-size: 18px;
+}
+
+#product_flavors {
+    font-size: 14px;
+}
+
+#product_price {
+    font-weight: bold;
+    font-size: 16px;
+}
