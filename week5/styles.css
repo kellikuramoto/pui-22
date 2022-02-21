@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: teal;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Azeret Mono', monospace;
 }
 
 /*********** HEADER ************/
@@ -10,7 +10,7 @@ header {
     padding: 10px;
     background-color: teal;
     color: white;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Azeret Mono', monospace;
 }
 
 header a {
@@ -43,5 +43,11 @@ h1 {
 .list a {
     color: teal;
     text-decoration: none;
+}
+
+button {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 14px;
+    padding: 5px;
 }
 

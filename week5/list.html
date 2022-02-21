@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;500&display=swap" rel="stylesheet">    
     
     <!-- javascript -->
     <script src="main.js" type="text/javascript"></script>
@@ -25,8 +27,12 @@
     <div id="todo-lists">
         <div class="list">
             <h2 class="list-title">Groceries</h2>
-            <ol>
-                <li>Eggs</li>
+            <ol id="grocery-list">
+                <li>
+                    <label for="check-eggs">Eggs</label>
+                    <input id="check-eggs" type="checkbox" class="complete-item" onclick="completeListItem(this)">
+                    <button class="delete-item"  onclick="deleteListItem(this.parentNode)">X</button>
+                </li>                
                 <li>Milk</li>
                 <li>Cereal</li>
             </ol>
@@ -35,8 +41,8 @@
 
         <label for="text_input">Text Input:</label>
         <input id="text_input" type="text"></input>
-        <button>Add Item</button>
-
+        <button onclick="addListItem()">Add Item</button>
+        
     </div>
     
     
