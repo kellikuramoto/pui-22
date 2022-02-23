@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xpresso</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Sedgwick Ave Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+</head>
+
+<body class="products">
+    <header>
+        <nav>
+            <div id="nav-left-align">
+                <a id="brand" href="index.html">xpresso</a>
+            </div>
+
+            <div id="nav-center-align">
+                <a href="products.html">products</a>
+                <a href="boxes.html">boxes</a>
+                <a href="about.html">about</a>
+            </div>
+
+            <div id="nav-right-align">
+                <a href="account.html">account</a>
+                <a href="checkout.html"><img src="images/cart.png" id="cart"></a>
+            </div>
+        </nav>
+    </header>
+
+    <ul class="breadcrumb">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="crazycolumbian.html">Crazy Columbian</a></li>
+    </ul>
+
+    <h1 class="individualproduct">Crazy Columbian</h1>
+    
+    <div id="individualproduct_content">
+        <div id="individualproduct_images">
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <img class="coffee_main" src="images/2.png">
+                    </td>
+                    <td>
+                        <img class="id1" src="images/id1.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="id2" src="images/id2.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="id3" src="images/id3.jpg">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <div id="individualproduct_description">
+            <h2>
+                nutty / smoky / caramel
+            </h2>
+
+            <table id="flavor_profile">
+                <tr>
+                  <th>ROAST</th>
+                  <th>ORIGIN</th> 
+                  <th>BREWING</th>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>Costa Rica</td> 
+                  <td>French Press</td>
+                </tr>
+            </table>
+
+
+            <div id="individualproduct_inside">
+                <p id="flavor_description">
+                    Time for a taste. This is kind of brew that’s made for sharing 
+                    and spilling some crazy stories. Full bodied, complex & smooth 
+                    with notes of hazelnuts, smoky marshmellows, & 
+                    a sweet caramel drizzle. FOMO in a cup. Once you take a sip,
+                    you'll go crazy and never go back! 
+                </p>
+    
+                <p id="individualproduct_price">
+                    $16.99
+                </p>
+
+                <table id="checkout_info">
+                    <tr>
+                      <td>
+                        <form action="/action_page.php">
+                            <label id="quantity" for="quantity">quantity:  </label>
+                            <select id="number" name="number">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                      </td>
+                      <td>
+                        <button id="individualproduct_checkout">
+                            <a href="checkout.html">add to cart</a>
+                        </button>        
+                      </td> 
+                    </tr>
+                </table>
+            
+                <p id="individualproduct_boxes">
+                    Love this brew? Check out our <a href="boxes.html">subscription boxes</a>
+                    to get it delivered straight to your door step every month.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="youmightlike">
+        <p>
+            You might also like
+        </p>
+
+        <table>
+            <tr>
+                <td>
+                    <img class="coffee1" src="images/1.png">
+                </td>
+                <td>
+                    <img class="coffee3" src="images/4.png">
+                </td>
+                <td>
+                    <img class="coffee3" src="images/3.png">
+                </td>
+                <td>
+                    <img class="coffee4" src="images/2.png">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Chocolate Lover</p>
+                        <a href="chocolatelover.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Turkish Delight</p>
+                        <a href="turkishdelight.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Ecuadorian’s Estatic</p>
+                        <a href="ecuadorianestatic.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Electric Ethiopian</p>
+                        <a href="electricethiopian.html">Shop</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

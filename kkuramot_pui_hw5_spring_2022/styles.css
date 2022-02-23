@@ -1,3 +1,4 @@
+/* NAVIGATION BAR STYLING */
 nav {
     font-size: 24px;
     text-align: center;
@@ -15,6 +16,15 @@ nav {
     float: right;
 }
 
+#nav-center-align {
+    display: inline;
+}
+
+#nav-center-align a {
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+}
+
 nav a {
     color: #E6E5E0;
     font-family: 'DM Sans', sans-serif;
@@ -24,7 +34,7 @@ nav a {
 nav a:hover {
     color: #E6E5E0;
     font-family: 'DM Sans', sans-serif;
-    text-decoration: underline;
+    text-decoration: 4px dotted underline;
     font-weight: bold;
 }
 
@@ -39,16 +49,10 @@ nav a:hover {
     width: 30px;
 }
 
+/* HOME PAGE STYLING */
 #homepage {
     font-family: 'DM Sans', sans-serif;
     background-image: url('images/homepage.jpg');
-    background-size: cover;
-    height: 100%;
-}
-
-#products {
-    font-family: 'DM Sans', sans-serif;
-    background-image: url('images/wallpaper.jpg');
     background-size: cover;
     height: 100%;
 }
@@ -75,6 +79,22 @@ nav a:hover {
     border: non;
 }
 
+/* PRODUCTS PAGE STYLING */
+h1 {
+    font-size: 40px;
+    color: #361706;
+    padding-left: 2%;
+    padding-top: 2%;
+
+}
+
+.products {
+    font-family: 'DM Sans', sans-serif;
+    background-image: url('images/wallpaper.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
 .coffee1, .coffee2, .coffee3, .coffee4 {
     height: auto; 
     width: auto; 
@@ -83,37 +103,215 @@ nav a:hover {
     padding: 20px;
 }
 
-th, td {
-    border: 1px dashed;
-}
-
 table {
     margin-left: auto;
     margin-right: auto;
-    border-spacing: 50px;
+    border-spacing: 50px 20px;
+    margin-bottom: 8%;
 }
 
-#product_description p{
+.product_description p {
     font-family: 'DM Sans', sans-serif;
     color: #361706;
     text-align: center;
 }
 
-#product_description a {
+.product_description a {
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
+    color: #361706;
+    /* font-weight: bold; */
+    display: block;
+    text-align: center;
 }
 
-#product_name {
+.product_description a:hover {
     font-size: 18px;
+    text-decoration: 2px dotted underline;
+    font-weight: bold;
+    display: block;
+    text-align: center;
 }
 
-#product_flavors {
+.product_name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product_flavors {
     font-size: 14px;
 }
 
-#product_price {
-    font-weight: bold;
+.product_price {
     font-size: 16px;
+}
+
+/* INDIVIDUAL PRODUCT PAGE STYLING */
+/* HTML Breadcrumb from https://www.w3schools.com/howto/howto_css_breadcrumbs.asp */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+}
+  
+ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+}
+  
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #361706;
+    content: "/\00a0";
+}
+  
+ul.breadcrumb li a {
+    color: #361706;
+    text-decoration: none;
+}
+  
+ul.breadcrumb li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1.individualproduct {
+    color: #7A5D4D;
+}
+
+#individualproduct_content {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#individualproduct_images {
+    width: 48%;
+    float: left;
+}
+
+#individualproduct_description {
+    width: 48%;
+    float: right;
+}
+
+.coffee_main {
+    height: auto; 
+    width: auto; 
+    max-width: 600px; 
+    max-height: 600px;
+    padding: 20px;
+}
+
+.id1, .id2, .id3 {
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 100px;
+    padding: 10px;
+}
+
+h2 {
+    color: #F5F5F1;
+    background-color: #7A5D4D;
+    font-family: 'Sedgwick Ave', cursive;
+    padding: 10px;
+    text-align: center;
+}
+
+table#flavor_profile th, td {
+    color: #E1AF48;
+    font-size: 18px;
+}
+
+#flavor_description {
+    color: #361706;
+    font-size: 18px;
+}
+
+#individualproduct_inside {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#individualproduct_price {
+    color: #361706;
+    font-size: 24px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#quantity {
+    color: #7A5D4D;
+    font-size: 24px;
+    display: inline;
+}
+#number {
+    color: #7A5D4D;
+    font-size: 18px;
+}
+
+button#individualproduct_checkout {
+    color: #F5F5F1;
+    background-color: #7A5D4D;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;  
+}
+
+button#individualproduct_checkout:active {
+    color: #F5F5F1;
+}
+
+#individualproduct_boxes {
+    color: #361706;
+    font-size: 16px;
+}
+
+#youmightlike {
+    color: #361706;
+    background-color: #F5F5F1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    float: right;
+}
+
+#youmightlike p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.product_like {
+    font-size: 18px;
+    color: #361706;
+}
+
+
+.product_description a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #361706;
+    /* font-weight: bold; */
+    display: block;
+    text-align: center;
+}
+
+.youmightlike_products a {
+    display: block;
+    text-align: center;
+    color: #361706;
+    text-decoration: none;
+}
+
+.youmightlike_products a:hover {
+    display: block;
+    text-align: center;
+    text-decoration: 2px dotted underline ;
 }
