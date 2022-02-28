@@ -80,13 +80,59 @@ nav a:hover {
     text-decoration: solid underline #E6E5E0 3px;
 }
 
+#why_xpresso {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #E6E5E0;
+    margin-top: 40%;
+    padding: 10px;
+}
+
+#why_title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #603F2D;
+}
+
+#why_xpresso table {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 40px 0px;
+    margin-bottom: 2%;
+    table-layout: fixed;
+}
+
+#table_why p {
+    color: #603F2D;
+}
+
+.why_image img {
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why_reason {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.why_description {
+    font-size: 16px;
+    text-align: center;
+}
+
 /* PRODUCTS PAGE STYLING */
 h1 {
     font-size: 40px;
     color: #361706;
     padding-left: 2%;
     padding-top: 2%;
-
 }
 
 .products, .boxes, .about, .checkout {
