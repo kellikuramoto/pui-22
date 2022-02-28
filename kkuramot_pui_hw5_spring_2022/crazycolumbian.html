@@ -105,8 +105,8 @@
                       <td>
                         <!-- Form Drop from https://www.w3schools.com/tags/tag_select.asp -->
                         <form action="/action_page.php">
-                            <label id="quantity" for="quantity">quantity:  </label>
-                            <select id="number" name="number">
+                            <label id="label_name" for="quantity">quantity:  </label>
+                            <select id="quantity" name="number">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -121,9 +121,7 @@
                         </form>
                       </td>
                       <td>
-                        <button id="individualproduct_checkout">
-                            <a href="checkout.html">add to cart</a>
-                        </button>        
+                        <button id="individualproduct_checkout" onclick="checkout()">Checkout</button>
                       </td> 
                     </tr>
                 </table>
@@ -185,6 +183,12 @@
             </tr>
         </table>
     </div>
+
+    <script>
+        function checkout() {
+            window.location.href = "checkout.html";
+        }
+    </script>
 </body>
 
 </html>

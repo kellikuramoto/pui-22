@@ -90,7 +90,7 @@ h1 {
 
 }
 
-.products, .boxes, .about {
+.products, .boxes, .about, .checkout {
     font-family: 'DM Sans', sans-serif;
     background-image: url('images/wallpaper.jpg');
     background-size: cover;
@@ -228,10 +228,19 @@ h2 {
     text-align: center;
 }
 
+#individualproduct_description table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table#flavor_profile th, td {
     color: #E1AF48;
     font-size: 18px;
 }
+
+#flavor_profile td {
+    padding: 0 15px;
+  }
 
 #flavor_description {
     color: #361706;
@@ -246,15 +255,21 @@ table#flavor_profile th, td {
 
 #individualproduct_price {
     color: #361706;
-    font-size: 24px;
+    font-size: 30px;
     text-align: right;
     font-weight: bold;
 }
-
-#quantity {
+#label_name {
     color: #7A5D4D;
     font-size: 24px;
     display: inline;
+}
+
+#quantity {
+    margin-left: 10px;
+    color: #7A5D4D;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
 }
 #number {
     color: #7A5D4D;
@@ -267,10 +282,10 @@ button#individualproduct_checkout {
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     border: none;
-    padding: 15px 32px;
+    margin-left: 200px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;  
 }
 
 button#individualproduct_checkout:active {
