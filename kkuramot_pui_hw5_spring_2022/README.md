@@ -1,1 +1,5 @@
-Additional Pages Coded: 'Boxes Page' and 'About Page'
+Additional Pages Coded: 
+Boxes Page / boxes.html
+About Page / about.html
+Additional Individual Product Page / crazycolumbian.html
+
