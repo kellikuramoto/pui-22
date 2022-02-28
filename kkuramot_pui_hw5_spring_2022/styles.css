@@ -88,7 +88,7 @@ h1 {
 
 }
 
-.products {
+.products, .boxes, .about {
     font-family: 'DM Sans', sans-serif;
     background-image: url('images/wallpaper.jpg');
     background-size: cover;
@@ -103,7 +103,7 @@ h1 {
     padding: 20px;
 }
 
-table {
+#table_products {
     margin-left: auto;
     margin-right: auto;
     border-spacing: 50px 20px;
@@ -194,11 +194,19 @@ h1.individualproduct {
     float: right;
 }
 
-.coffee_main {
+.coffee_main_1 {
     height: auto; 
     width: auto; 
-    max-width: 600px; 
-    max-height: 600px;
+    max-width: 800px; 
+    max-height: 800px;
+    padding: 20px;
+}
+
+.coffee_main_2 {
+    height: auto; 
+    width: auto; 
+    max-width: 400px; 
+    max-height: 400px;
     padding: 20px;
 }
 
@@ -288,11 +296,17 @@ button#individualproduct_checkout:active {
     font-weight: bold;
 }
 
+#table_youmightlike {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 20px;
+    margin-bottom: 2%;
+}
+
 .product_like {
     font-size: 18px;
     color: #361706;
 }
-
 
 .product_description a {
     text-decoration: none;
@@ -314,4 +328,195 @@ button#individualproduct_checkout:active {
     display: block;
     text-align: center;
     text-decoration: 2px dotted underline ;
+}
+
+/* BOXES PAGE STYLING */
+#table_box {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 20px;
+    margin-bottom: 2%;
+}
+
+#table_box td {
+    border-spacing: 20px 20px;
+    outline: 2px #361706 dotted;
+}
+
+#table_box p {
+    text-align: center;
+    color: #361706;
+    font-size: 18px;
+}
+
+#table_box a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #361706;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.coffee1_box, .coffee2_box, .coffee3_box, .mug_box, .straw_box {
+    height: auto; 
+    width: auto; 
+    max-height: 175px;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #361706;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+#table_subscription {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 90px 20px;
+    margin-bottom: 6%;
+}
+
+.subscription_price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #361706;
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.subscription_rate {
+    font-size: 16px;
+    color: #361706;
+    text-align: center;
+    padding: 3px;
+}
+
+#table_subscription a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #F5F5F1;
+    background-color: #603F2D;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+#table_subscription td {
+    background-color: #F5F5F1;
+    outline: 2px #94877E solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+#table_subscription th {
+    font-size: 24px;
+    font-weight: normal;
+    color: #F5F5F1;
+    background-color: #94877E;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ABOUT PAGE STYLING */
+#table_about_1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 0px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#table_about_2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 0px;
+    margin-bottom: 6%;
+}
+
+#table_about_1 td {
+    padding: 15px;
+    width: 48%;
+}
+
+#table_about_2 td {
+    padding: 40px;
+    border-spacing: 20px 20px;
+    width: 48%;
+}
+
+.about_story {
+    font-size: 30px;
+    outline: 2px #7A5D4D solid;
+    color: #7A5D4D;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.about_description_story {
+    background-color: #7A5D4D;
+    outline: 2px #7A5D4D solid;
+    color: #F5F5F1;
+    font-size: 14px;
+    text-align: center;
+}
+
+.about_mission {
+    font-size: 30px;
+    outline: 2px #94877E solid;
+    color: #94877E;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.about_description_mission {
+    background-color: #94877E;
+    outline: 2px #94877E solid;
+    color: #F5F5F1;
+    font-size: 16px;
+    text-align: center;
+}
+
+.about_coffee {
+    font-size: 30px;
+    outline: 2px #361706 solid;
+    color: #361706;    font-weight: normal;
+    padding: 15px;
+}
+
+.about_description_coffee {
+    background-color: #361706;
+    outline: 2px #361706 solid;
+    color: #F5F5F1;
+    font-size: 16px;
+    text-align: center;
+}
+
+.about_people {
+    font-size: 30px;
+    outline: 2px #E1AF48 solid;
+    color: #E1AF48;    font-weight: normal;
+    padding: 15px;
+}
+
+.about_description_people {
+    background-color: #E1AF48;
+    outline: 2px #E1AF48 solid;
+    color: #F5F5F1;
+    font-size: 16px;
+    text-align: center;
+}
+
+.table_box p {
+    text-align: center;
+    color: #361706;
+    font-size: 18px;
 }
