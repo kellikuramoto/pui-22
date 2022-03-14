@@ -1,0 +1,18 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+#container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Chicle', cursive;
+}
+
+#animal-img {
+    max-width: 200px;
+    height: auto;
+}
