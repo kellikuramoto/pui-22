@@ -4,6 +4,7 @@
     <title>Xpresso</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <base href="crazycolumbian.html">
 
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="main.js" type="text/javascript"></script>
@@ -19,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="products">
+<body class="products" onload="individualProduct(crazyColombian)">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -34,24 +35,25 @@
 
             <div id="nav-right-align">
                 <a href="account.html">account</a>
-                <a href="checkout.html"><img id="cart_img" src="images/cart.png" id="cart" alt="Cart icon"></a>
+                <a href="checkout.html"><img id="cart_img" src="images/cart.png" id="cart" alt="Cart Icon"></a>
             </div>
         </nav>
     </header>
 
     <ul class="breadcrumb">
         <li><a href="products.html">Products</a></li>
-        <li><a href="chocolatelover.html">Chocolate Lover</a></li>
+        <li><a href=""></a></li>
     </ul>
 
-    <h1 class="individualproduct">Chocolate Lover</h1>
+
+    <h1 class="individualproduct"></h1>
     
     <div id="individualproduct_content">
         <div id="individualproduct_images">
             <table>
                 <tr>
                     <td rowspan="3">
-                        <img class="coffee_main_2" src="images/1.png" alt="Image of coffee beans">
+                        <img class="coffee_main_1" src="images/2.png" alt="Image of coffee beans">
                     </td>
                     <td>
                         <img class="id1" src="images/id1.jpg" alt="Image of coffee bag and beans">
@@ -72,7 +74,7 @@
     
         <div id="individualproduct_description">
             <h2>
-                sweet / nippy / smoky
+                <!-- nutty / smoky / caramel -->
             </h2>
 
             <table id="flavor_profile">
@@ -82,23 +84,27 @@
                   <th>BREWING</th>
                 </tr>
                 <tr>
-                  <td>Light</td>
-                  <td>South America</td> 
-                  <td>Espresso</td>
+                  <!-- <td>Medium</td>
+                  <td>Costa Rica</td> 
+                  <td>French Press</td> -->
+                  <td id="flavor_roast"></td>
+                  <td id="flavor_origin"></td> 
+                  <td id="flavor_brewing"></td>
                 </tr>
             </table>
 
 
             <div id="individualproduct_inside">
                 <p id="flavor_description">
-                    Perfect for when you need that extra kick to wake up, 
-                    or if you are one of those badasses that really enjoy 
-                    the taste of strong black coffee. Strong to the taste,
-                    sweet with the punch, Chocolate Lover's got your back.  
+                    <!-- Time for a taste. This is kind of brew that’s made for sharing 
+                    and spilling some crazy stories. Full bodied, complex & smooth 
+                    with notes of hazelnuts, smoky marshmellows, & 
+                    a sweet caramel drizzle. FOMO in a cup. Once you take a sip,
+                    you'll go crazy and never go back!  -->
                 </p>
     
                 <p id="individualproduct_price">
-                    $14.99
+                    <!-- $16.99 -->
                 </p>
 
                 <table id="checkout_info">
@@ -106,18 +112,22 @@
                       <td>
                         <!-- Form Drop from https://www.w3schools.com/tags/tag_select.asp -->
                         <form action="/action_page.php">
-                            <label id="label_name" for="quantity">quantity:  </label>
-                            <select id="quantity" name="number" onchange="updatePrice1()">
+                            <label id="label_name" for="quantity">Quantity:  </label>
+                            <select id="quantity" name="number">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
                             </select>
                         </form>
                       </td>
                       <td>
-                        <button id="individualproduct_checkout" onclick="addToCart(), addProduct('Crazy Columbian', updatePrice1())">Add to cart</button>
+                        <button id="individualproduct_checkout" onclick="checkout(), addToCart()">Add to cart</button>
                       </td> 
                     </tr>
                 </table>
@@ -154,8 +164,8 @@
             <tr>
                 <td>
                     <div class="youmightlike_products">
-                        <p class="product_like">Crazy Colombian</p>
-                        <a href="crazycolumbian.html">Shop</a>
+                        <p class="product_like">Chocolate Lover</p>
+                        <a href="chocolatelover.html">Shop</a>
                     </div>
                 </td>
                 <td>

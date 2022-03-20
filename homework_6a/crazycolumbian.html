@@ -45,6 +45,7 @@
         <li><a href="crazycolumbian.html">Crazy Columbian</a></li>
     </ul>
 
+
     <h1 class="individualproduct">Crazy Colombian</h1>
     
     <div id="individualproduct_content">
@@ -108,22 +109,28 @@
                       <td>
                         <!-- Form Drop from https://www.w3schools.com/tags/tag_select.asp -->
                         <form action="/action_page.php">
-                            <label id="label_name" for="quantity">quantity:  </label>
-                            <select id="quantity" name="number">
+                            <label id="label_name" for="quantity">Type:  </label>
+                            <select id="ground" name="ground" onchange="updatePrice1()">
+                                <option value="1">Whole bean</option>
+                                <option value="2">Fresh ground</option>
+                            </select>
+                        </form>
+
+                        <br>
+
+                        <form action="/action_page.php">
+                            <label id="label_name" for="quantity">Quantity:  </label>
+                            <select id="quantity" name="number" onchange="updatePrice1()">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
                             </select>
                         </form>
                       </td>
                       <td>
-                        <button id="individualproduct_checkout" onclick="checkout()">Add to cart</button>
+                        <button id="individualproduct_checkout" onclick="addToCart(), addProduct('Crazy Columbian', updatePrice1())">Add to cart</button>
                       </td> 
                     </tr>
                 </table>

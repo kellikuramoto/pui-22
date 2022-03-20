@@ -19,7 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="checkout" onload="onLoad()">
+<!-- <body class="checkout" onload="updateCart('Crazy Columbian')"> -->
+    <body class="checkout">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -39,7 +40,7 @@
         </nav>
     </header>
 
-    <h1>CHECKOUT</h1>
+    <h1>CART</h1>
     <!-- Checkout form from https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
     <table id="checkoutinfo" style="width: 90%">
         <tr>
@@ -49,7 +50,7 @@
                     <tr>
                         <td>
                             <label for="first"><i class="fa fa-user"></i> Full Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                            <input type="text" id="fname" name="firstname" placeholder="Joe Shmo">
                         </td>
                         <td>
                             <label for="email"><i class="fa fa-envelope"></i> Email</label>
@@ -78,23 +79,60 @@
                     </tr>
                 </table>
             </td>
-            <td>
-                <h4>Cart</h4>
+            <td rowspan=2>
                 <div id="update_cart"> 
-
-                </div>
-                <!-- <p>
-                    <a id="card_product" href=""></a> <span class="price">$15</span>
-                </p> -->
-                <!-- <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-                <p><a href="#">Product 4</a> <span class="price">$2</span></p> -->
+                <table id="cartinfo">
+                    <tr>
+                        <td class="cart_product">
+                            Crazy Columbian 
+                            <br>
+                            <b>$16.99</b>
+                            <ul>
+                                <li> One time purchase</li>
+                                <li> Whole bean</li>
+                            </ul>
+                        </td>
+                        <td class="x">
+                            x
+                        </td>
+                        <td class="cart_quantity">
+                            2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart_product">
+                            Chocolate Lover
+                            <br>
+                            <b>$14.99</b>
+                            <ul>
+                                <li> One time purchase</li>
+                                <li> Fresh ground</li>
+                            </ul>
+                        </td>
+                        <td class="x">
+                            x
+                        </td>
+                        <td class="cart_quantity">
+                            1
+                        </td>
+                    </tr>
+                </table>
                 <hr style="border-top: 2px dotted #7A5D4D">
+
+                <p> Subtotal 
+                    <span id="currrent_price" style="color:black"><b>$65.96</b></span>
+                </p>
+                <p> Shipping 
+                    <span id="currrent_price" style="color:black"><b>$5.99</b></span>
+                </p>
+                <hr style="border-top: 2px dotted #7A5D4D">
+
                 <p> Total 
-                    <span class="price" style="color:black"><b>$30</b></span>
+                    <span id="currrent_price" style="color:black"><b>$71.95</b></span>
                 </p>
                 
                 <input type="submit" value="Continue to checkout" class="checkout_button">
+                </div>
             </td>
         </tr>
         <tr>
