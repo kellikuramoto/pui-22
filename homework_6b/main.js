@@ -27,6 +27,7 @@ let crazyColombian = {
 
 // @purpose Visual change of cart icon according to user preference
 // @called 'Add to cart' button is pressed
+// TODO: need to change icon for when multiple items are pressed and switched to product page in between
 function showCart() {
     var added = document.getElementById('individualproduct_checkout');
     added.innerHTML = "Added to cart!";
@@ -127,6 +128,8 @@ function showPrice16() {
     }
 }
 
+// @purpose Update object in localStorage according to user preference
+// @called When any value is changed
 function updateObject(productName, productObject) {
     localStorage.setItem(productName, JSON.stringify(productObject));
 }
@@ -216,6 +219,8 @@ function showPrice14() {
     }
 }
 
+// @purpose Updates HTML with user preferences of added cart items
+// @called 'Checkout.html' page is loaded
 function showProducts() {
     for (let i = 0; i < localStorage.length; i+= 1) {
         let storedCoffee = localStorage.key(i);
@@ -223,7 +228,6 @@ function showProducts() {
         var coffee = JSON.parse(localStorage.getItem(storedCoffee));
         console.log(coffee);
 
-        // let coffeeInfo = JSON.parse(coffeeObject);
         var coffeeNameQuantity = document.createElement('p');
         var coffeeNameQuantityValues = document.createTextNode(coffee.coffee + " x " + coffee.quantity);
 
@@ -245,3 +249,36 @@ function showProducts() {
     }
 }
 
+// @purpose Updates HTML with user preferences of total
+// @called 'Checkout.html' page is loaded
+// TODO: change totals for item prices to int
+function getTotal() {
+    var subtotal = 0.00;
+    for (let i = 0; i < localStorage.length; i+= 1) {
+        let storedCoffee = localStorage.key(i);
+        console.log(storedCoffee);
+        var coffee = JSON.parse(localStorage.getItem(storedCoffee));
+        var stringTotal = coffee.price;
+        var total = parseInt(stringTotal);
+        subtotal += total;
+        console.log(subtotal);
+    }
+
+    var spanSubTotal = document.createElement('span');
+    var stringSubTotal = subtotal.toString();
+    spanSubTotal.style.fontWeight = "bold";
+    spanSubTotal.appendChild(document.createTextNode(stringSubTotal));
+
+    var total = subtotal + 5.99;
+    var spanTotal = document.createElement('span');
+    var stringTotal = total.toString();
+    console.log(stringTotal);
+    spanTotal.style.fontWeight = "bold";
+    spanTotal.appendChild(document.createTextNode(stringTotal));
+
+    var element = document.getElementById('subtotal');
+    element.appendChild(spanSubTotal);  
+
+    var element = document.getElementById('total');
+    element.appendChild(spanTotal);  
+}
