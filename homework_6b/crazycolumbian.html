@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="products">
+<body class="products" onload="showCart2()">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -111,7 +111,7 @@
                         <form action="/action_page.php">
                             <label id="label_name" for="quantity">Type:  </label>
                             <select id="ground" name="ground"
-                            onchange="setGround(crazyColombian), setPrice16(crazyColombian)">
+                            onchange="setGround(crazyColombian)">
                                 <option value="1">Whole bean</option>
                                 <option value="2">Fresh ground</option>
                             </select>
@@ -132,7 +132,7 @@
                       </td>
                       <td>
                         <button id="individualproduct_checkout" 
-                        onclick="showCart(), addProduct('Crazy Columbian', crazyColombian)">Add to cart</button>
+                        onclick="showCart(), addProduct('Crazy Colombian', crazyColombian)">Add to cart</button>
 
                       </td> 
                     </tr>

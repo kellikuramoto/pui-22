@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="products">
+<body class="products" onload="showCart2()">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -107,7 +107,7 @@
                         <!-- Form Drop from https://www.w3schools.com/tags/tag_select.asp -->
                         <form action="/action_page.php">
                             <label id="label_name" for="quantity">Type:  </label>
-                            <select id="ground" name="ground" onchange="setGround(chocolateLover), showPrice14(chocolateLover)">
+                            <select id="ground" name="ground" onchange="setGround(chocolateLover)">
                                 <option value="1">Whole bean</option>
                                 <option value="2">Fresh ground</option>
                             </select>

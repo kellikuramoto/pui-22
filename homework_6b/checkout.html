@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="checkout"  onload="showProducts(), getTotal()">
+<body class="checkout"  onload="showProducts(), getTotal(), showCart2()">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -34,7 +34,7 @@
 
             <div id="nav-right-align">
                 <a href="account.html">account</a>
-                <a href="checkout.html"><img src="images/cart.png" id="cart" alt="Cart icon"></a>
+                <a href="checkout.html"><img id="cart_img" src="images/cart.png" id="cart" alt="Cart Icon"></a>
             </div>
         </nav>
     </header>
@@ -86,17 +86,13 @@
                     
                     <hr style="border-top: 2px dotted #7A5D4D">
 
-                    <p id="subtotal"> Subtotal 
-
-                    </p>
+                    <p id="subtotal"> Subtotal $</p>
                     <p> Shipping 
                         <span id="currrent_price" style="color:black"><b>$5.99</b></span>
                     </p>
                     <hr style="border-top: 2px dotted #7A5D4D">
 
-                    <p id="total"> Total 
-
-                    </p>
+                    <p id="total"> Total $</p>
                     
                     <input type="submit" value="Continue to checkout" class="checkout_button" onclick="localStorage.clear()"">
                 </div>

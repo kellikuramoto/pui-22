@@ -25,53 +25,106 @@ let crazyColombian = {
     description : 'Perfect for when you need that extra kick to wake up, or if you are one of those badasses that really enjoy the taste of strong black coffee. Strong to the taste, sweet with the punch, Chocolate Lovers got your back'
 };
 
+function setCart() {
+    localStorage.setItem('Total Products', '0');
+}
+
 // @purpose Visual change of cart icon according to user preference
 // @called 'Add to cart' button is pressed
-// TODO: need to change icon for when multiple items are pressed and switched to product page in between
 function showCart() {
     var added = document.getElementById('individualproduct_checkout');
     added.innerHTML = "Added to cart!";
-    var select = document.getElementById('quantity');
-    var value = select.options[select.selectedIndex].value;
 
-    if (value == 1) {
+    var select = document.getElementById('quantity');
+    var selected = select.options[select.selectedIndex].value;
+
+    var stringTotalProducts = localStorage.getItem('Total Products');
+    var intTotalProducts = parseInt(stringTotalProducts);
+
+    var intQuantity = parseInt(selected);
+    var value = intTotalProducts + intQuantity;
+    localStorage.setItem('Total Products', value);
+
+    if (value == '1') {
         document.getElementById("cart_img").src = 'images/one.png';
     }
 
-    if (value == 2) {
+    if (value == '2') {
         document.getElementById("cart_img").src = 'images/two.png';
     }
 
-    if (value == 3) {
+    if (value == '3') {
         document.getElementById("cart_img").src = 'images/three.png';
     }
 
-    if (value == 4) {
+    if (value == '4') {
         document.getElementById("cart_img").src = 'images/four.png';
     }
 
-    if (value == 5) {
+    if (value == '5') {
         document.getElementById("cart_img").src = 'images/five.png';
     }
 
-    if (value == 6) {
+    if (value == '6') {
         document.getElementById("cart_img").src = 'images/six.png';
     }
 
-    if (value == 7) {
+    if (value == '7') {
         document.getElementById("cart_img").src = 'images/seven.png';
     }
 
-    if (value == 8) {
+    if (value == '8') {
         document.getElementById("cart_img").src = 'images/eight.png';
     }
 
-    if (value == 9) {
+    if (value == '9') {
         document.getElementById("cart_img").src = 'images/nine.png';
     }
     return value;
 }
 
+// @purpose Visual change of cart icon according to user preference
+// @called when checkout, product, and individual product pages are loaded
+function showCart2() {
+    var value = localStorage.getItem('Total Products');
+
+    if (value == '1') {
+        document.getElementById("cart_img").src = 'images/one.png';
+    }
+
+    if (value == '2') {
+        document.getElementById("cart_img").src = 'images/two.png';
+    }
+
+    if (value == '3') {
+        document.getElementById("cart_img").src = 'images/three.png';
+    }
+
+    if (value == '4') {
+        document.getElementById("cart_img").src = 'images/four.png';
+    }
+
+    if (value == '5') {
+        document.getElementById("cart_img").src = 'images/five.png';
+    }
+
+    if (value == '6') {
+        document.getElementById("cart_img").src = 'images/six.png';
+    }
+
+    if (value == '7') {
+        document.getElementById("cart_img").src = 'images/seven.png';
+    }
+
+    if (value == '8') {
+        document.getElementById("cart_img").src = 'images/eight.png';
+    }
+
+    if (value == '9') {
+        document.getElementById("cart_img").src = 'images/nine.png';
+    }
+    return value;
+}
 // @purpose Adds updated product object to local storage
 // @called 'Add to cart' button is pressed
 function addProduct(productName, productObject) {
@@ -93,37 +146,37 @@ function showPrice16() {
     var quantity = select.options[select.selectedIndex].value;
 
     if (quantity == 1) {
-        newPrice = "$16.99";
+        newPrice = '16.99';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 2) {
-        newPrice = "$33.98";
+        newPrice = '33.98';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 3) {
-        newPrice = "$50.97";
+        newPrice = '50.97';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 4) {
-        newPrice = "$67.96";
+        newPrice = '67.96';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 5) {
-        newPrice = "$84.95";
+        newPrice = '84.95';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 }
@@ -184,37 +237,37 @@ function showPrice14() {
     var quantity = select.options[select.selectedIndex].value;
 
     if (quantity == 1) {
-        newPrice = "$14.99";
+        newPrice = '14.99';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 2) {
-        newPrice = "$29.98";
+        newPrice = '29.98';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 3) {
-        newPrice = "$44.97";
+        newPrice = '44.97';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 4) {
-        newPrice = "$59.96";
+        newPrice = '59.96';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 
     if (quantity == 5) {
-        newPrice = "$74.95";
+        newPrice = '74.95';
         price = document.getElementById("individualproduct_price");
-        price.innerHTML = newPrice;
+        price.innerHTML = '$' + newPrice;
         return newPrice;
     }
 }
@@ -224,16 +277,23 @@ function showPrice14() {
 function showProducts() {
     for (let i = 0; i < localStorage.length; i+= 1) {
         let storedCoffee = localStorage.key(i);
-        console.log(storedCoffee);
+        if (storedCoffee == 'Total Products') {
+            continue
+        }
+        else {
         var coffee = JSON.parse(localStorage.getItem(storedCoffee));
-        console.log(coffee);
 
         var coffeeNameQuantity = document.createElement('p');
         var coffeeNameQuantityValues = document.createTextNode(coffee.coffee + " x " + coffee.quantity);
-
-        var span = document.createElement('span');
-        span.style.fontWeight = "bold";
-        span.appendChild(document.createTextNode(coffee.price));
+        
+        var productTotal = document.createElement('p');
+        var dollar = document.createTextNode('$'); 
+        productTotal.appendChild(dollar);
+        productTotal.style.fontWeight = "bold";
+        var productPrice = document.createElement('span');
+        productPrice.style.fontWeight = "bold";
+        productPrice.appendChild(document.createTextNode(coffee.price));
+        productTotal.appendChild(productPrice);
 
         var ul = document.createElement('ul');
         li = document.createElement('li'); 
@@ -244,41 +304,45 @@ function showProducts() {
 
         var element = document.getElementById("current_cart");
         element.appendChild(coffeeNameQuantity);  
-        element.appendChild(span);  
+        element.appendChild(productTotal);  
         element.appendChild(ul);
+        }
     }
 }
 
 // @purpose Updates HTML with user preferences of total
 // @called 'Checkout.html' page is loaded
-// TODO: change totals for item prices to int
 function getTotal() {
     var subtotal = 0.00;
     for (let i = 0; i < localStorage.length; i+= 1) {
         let storedCoffee = localStorage.key(i);
-        console.log(storedCoffee);
+        if (storedCoffee == 'Total Products') {
+            continue
+        }
+        else {
         var coffee = JSON.parse(localStorage.getItem(storedCoffee));
         var stringTotal = coffee.price;
-        var total = parseInt(stringTotal);
-        subtotal += total;
-        console.log(subtotal);
+        var subtotalFloat = parseFloat(stringTotal);
+        subtotal += subtotalFloat;
+        }
     }
+
+    var total = subtotal + 5.99;
+    subtotal = subtotal.toFixed(2);
+    total = total.toFixed(2);
 
     var spanSubTotal = document.createElement('span');
     var stringSubTotal = subtotal.toString();
     spanSubTotal.style.fontWeight = "bold";
     spanSubTotal.appendChild(document.createTextNode(stringSubTotal));
 
-    var total = subtotal + 5.99;
     var spanTotal = document.createElement('span');
     var stringTotal = total.toString();
-    console.log(stringTotal);
     spanTotal.style.fontWeight = "bold";
     spanTotal.appendChild(document.createTextNode(stringTotal));
 
-    var element = document.getElementById('subtotal');
-    element.appendChild(spanSubTotal);  
-
-    var element = document.getElementById('total');
-    element.appendChild(spanTotal);  
+    var elementSubTotal = document.getElementById('subtotal');
+    elementSubTotal.appendChild(spanSubTotal);  
+    var elementTotal = document.getElementById('total');
+    elementTotal.appendChild(spanTotal);  
 }
