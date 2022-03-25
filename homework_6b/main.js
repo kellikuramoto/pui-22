@@ -40,6 +40,13 @@ let electricEthiopian = {
     ground: 'Whole Bean',
 };
 
+let nightOwl = {
+	coffee : 'Night Owl',
+    quantity : '1',
+    price : '12.99',
+    ground: 'Whole Bean',
+};
+
 // @purpose Set up localStorage key value pair for total items
 // @called onload of index.html
 function setCart() {
