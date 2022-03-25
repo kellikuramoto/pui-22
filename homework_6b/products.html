@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="products" onload="showCart2()">
+<body class="products" onload="showCart2(), filterSelection('all'), activeButton()">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -40,24 +40,17 @@
     </header>
 
     <h1>PRODUCTS</h1>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('light')"> Light</button>
+        <button class="btn" onclick="filterSelection('medium')"> Medium</button>
+        <button class="btn" onclick="filterSelection('dark')"> Dark</button>
+      </div>
+    <div class="container">
     <table id="table_products">
         <tr>
-            <td>
+            <td class="filterDiv light">
                 <img class="coffee1" src="images/1.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee2" src="images/2.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee4" src="images/4.png" alt="Image of coffee beans">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
                 <div class="product_description">
                     <p class="product_name">Chocolate Lover</p>
                     <p class="product_flavors">sweet / nippy / smoky</p>
@@ -65,7 +58,8 @@
                     <a href="chocolatelover.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv medium">
+                <img class="coffee2" src="images/2.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Crazy Colombian</p>
                     <p class="product_flavors">nutty / smoky / caramel</p>
@@ -73,7 +67,8 @@
                     <a href="crazycolumbian.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv dark">
+                <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Ecuadorian’s Ecstatic</p>
                     <p class="product_flavors">toasty / buttery / toffee</p>
@@ -81,7 +76,8 @@
                     <a href="ecuadorianecstatic.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv dark">
+                <img class="coffee4" src="images/4.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Grandpa Joe's</p>
                     <p class="product_flavors">woody / tobacco / rough</p>
@@ -92,22 +88,8 @@
         </tr>
 
         <tr>
-            <td>
+            <td class="filterDiv light">
                 <img class="coffee4" src="images/4.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee1" src="images/1.png" alt="Image of coffee beans">
-            </td>
-            <td>
-                <img class="coffee2" src="images/2.png" alt="Image of coffee beans">
-            </td>
-        </tr>
-
-        <tr>
-            <td>
                 <div class="product_description">
                     <p class="product_name">Turkish Delight</p>
                     <p class="product_flavors">cinnamon / vanilla / orange</p>
@@ -115,7 +97,8 @@
                     <a href="turkishdelight.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv medium">
+                <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Electric Ethiopian</p>
                     <p class="product_flavors">delicate / dried berries / walnut</p>
@@ -123,7 +106,8 @@
                     <a href="electricethiopian.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv light">
+                <img class="coffee1" src="images/1.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Night Owl</p>
                     <p class="product_flavors">decaf / rich / creamy</p>
@@ -131,7 +115,8 @@
                     <a href="nightowl.html">SHOP NOW</a>
                 </div>
             </td>
-            <td>
+            <td class="filterDiv light">
+                <img class="coffee2" src="images/2.png" alt="Image of coffee beans">
                 <div class="product_description">
                     <p class="product_name">Purely Peruvian</p>
                     <p class="product_flavors">light / cherry / vanilla</p>
@@ -141,7 +126,7 @@
             </td>
         </tr>
     </table>
-
+    </div>
 </body>
 
 </html>
