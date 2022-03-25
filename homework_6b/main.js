@@ -47,6 +47,13 @@ let nightOwl = {
     ground: 'Whole Bean',
 };
 
+let purelyPeruvian = {
+	coffee : 'Purely Peruvian',
+    quantity : '1',
+    price : '14.99',
+    ground: 'Whole Bean',
+};
+
 // @purpose Set up localStorage key value pair for total items
 // @called onload of index.html
 function setCart() {
