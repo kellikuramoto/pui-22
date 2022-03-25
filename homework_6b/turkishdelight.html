@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Xpresso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <base href="crazycolumbian.html">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="main.js" type="text/javascript"></script>
+    
+    <!-- DM Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Sedgwick Ave Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+</head>
+
+<body class="products" onload="showCart2()">
+    <header>
+        <nav>
+            <div id="nav-left-align">
+                <a id="brand" href="index.html">xpresso</a>
+            </div>
+
+            <div id="nav-center-align">
+                <a href="products.html">products</a>
+                <a href="boxes.html">boxes</a>
+                <a href="about.html">about</a>
+            </div>
+
+            <div id="nav-right-align">
+                <a href="account.html">account</a>
+                <a href="checkout.html"><img id="cart_img" src="images/cart.png" id="cart" alt="Cart Icon"></a>
+            </div>
+        </nav>
+    </header>
+
+    <ul class="breadcrumb">
+        <li><a href="products.html">Products</a></li>
+        <li><a href="turkishdelight.html">Turkish Delight</a></li>
+    </ul>
+
+
+    <h1 class="individualproduct">Turkish Delight</h1>
+    
+    <div id="individualproduct_content">
+        <div id="individualproduct_images">
+            <table>
+                <tr>
+                    <td rowspan="3">
+                        <img class="coffee_main_1" src="images/4.png" alt="Image of coffee beans">
+                    </td>
+                    <td>
+                        <img class="id1" src="images/id1.jpg" alt="Image of coffee bag and beans">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="id2" src="images/id2.jpg" alt="Image of coffee bag and beans">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="id3" src="images/id3.jpg" alt="Image of coffee bag">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <div id="individualproduct_description">
+            <h2>
+                cinnamon / vanilla / orange
+            </h2>
+
+            <table id="flavor_profile">
+                <tr>
+                  <th>ROAST</th>
+                  <th>ORIGIN</th> 
+                  <th>BREWING</th>
+                </tr>
+                <tr>
+                  <td>Light</td>
+                  <td>Turkey</td> 
+                  <td>Aeropress</td>
+                </tr>
+            </table>
+
+
+            <div id="individualproduct_inside">
+                <p id="flavor_description">
+                    Calling all introverts. This one is for those who just need some peace and a cup of coffee. A more relaxed, half-caffeinated blend for when you just want to chill. A smooth, warm, and balanced light roast with warm notes of toasted orange, semi-sweet vanilla, and a dash of cinnamon. 
+                </p>
+    
+                <p id="individualproduct_price">
+                    $16.99
+                </p>
+
+                <table id="checkout_info">
+                    <tr>
+                      <td>
+                        <!-- Form Drop from https://www.w3schools.com/tags/tag_select.asp -->
+                        <form action="/action_page.php">
+                            <label id="label_name" for="quantity">Type:  </label>
+                            <select id="ground" name="ground"
+                            onchange="setGround(turkishDelight)">
+                                <option value="1">Whole bean</option>
+                                <option value="2">Fresh ground</option>
+                            </select>
+                        </form>
+
+                        <br>
+
+                        <form action="/action_page.php">
+                            <label id="label_name" for="quantity">Quantity:  </label>
+                            <select id="quantity" name="number" onchange="showPrice16(), setQuantity(turkishDelight), setPrice16(turkishDelight)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </form>
+                      </td>
+                      <td>
+                        <button id="individualproduct_checkout" 
+                        onclick="showCart(), addProduct('Turkish Delight', turkishDelight)">Add to cart</button>
+
+                      </td> 
+                    </tr>
+                </table>
+            
+                <p id="individualproduct_boxes">
+                    Love this brew? Check out our <a href="boxes.html">subscription boxes</a>
+                    to get it delivered straight to your door step every month.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="youmightlike">
+        <p>
+            You might also like
+        </p>
+
+        <table id="table_youmightlike">
+            <tr>
+                <td>
+                    <img class="coffee1" src="images/1.png" alt="Image of coffee beans">
+                </td>
+                <td>
+                    <img class="coffee3" src="images/4.png" alt="Image of coffee beans">
+                </td>
+                <td>
+                    <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
+                </td>
+                <td>
+                    <img class="coffee4" src="images/2.png" alt="Image of coffee beans">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Chocolate Lover</p>
+                        <a href="chocolatelover.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Turkish Delight</p>
+                        <a href="turkishdelight.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Crazy Colombian</p>
+                        <a href="crazycolumbian.html">Shop</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="youmightlike_products">
+                        <p class="product_like">Electric Ethiopian</p>
+                        <a href="electricethiopian.html">Shop</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

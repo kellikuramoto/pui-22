@@ -107,6 +107,10 @@ nav a:hover {
     color: #603F2D;
 }
 
+#table_why td {
+    vertical-align: top;
+}
+
 .why_image img {
     max-height: 50px;
     height: auto;

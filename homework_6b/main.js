@@ -26,6 +26,13 @@ let grandpaJoe = {
     ground: 'Whole Bean',
 };
 
+let turkishDelight = {
+	coffee : 'Turkish Delight',
+    quantity : '1',
+    price : '16.99',
+    ground: 'Whole Bean',
+};
+
 // @purpose Set up localStorage key value pair for total items
 // @called onload of index.html
 function setCart() {
