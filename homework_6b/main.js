@@ -430,6 +430,8 @@ function getTotal() {
     elementTotal.appendChild(spanTotal);  
 }
 
+// @purpose Updates products shown according to filter
+// @called filter buttons are selected
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
