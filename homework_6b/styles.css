@@ -242,10 +242,8 @@ h1.individualproduct {
 }
 
 .coffee_main_1 {
-    height: auto; 
-    width: auto; 
-    max-width: 800px; 
-    max-height: 800px;
+    height: 400px; 
+    width: 400px; 
     padding: 20px;
 }
 

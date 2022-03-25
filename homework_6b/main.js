@@ -1,16 +1,8 @@
-// https://stackabuse.com/storing-data-in-the-browser-with-localstorage/
-// https://gomakethings.com/how-to-update-localstorage-with-vanilla-javascript/ 
-
 let chocolateLover = {
 	coffee : 'Chocolate Lover',
     quantity : '1',
     price : '14.99',
     ground: 'Whole Bean',
-    flavor : 'sweet / nippy / smoky',
-    roast : 'Light',
-    origin : 'South America',
-    brewing : 'Espresso',
-    description : 'Time for a taste. This is kind of brew that’s made for sharing and spilling some crazy stories. Full bodied, complex & smooth with notes of hazelnuts, smoky marshmellows, &  a sweet caramel drizzle. FOMO in a cup. Once you take a sip, you will go crazy and never go back'
 };
 
 let crazyColombian = {
@@ -18,13 +10,24 @@ let crazyColombian = {
     quantity : '1',
     price : '16.99',
     ground: 'Whole Bean',
-    flavor : 'nutty / smoky / caramel',
-    roast : 'Medium',
-    origin : 'Costa Rica',
-    brewing : 'French Press',
-    description : 'Perfect for when you need that extra kick to wake up, or if you are one of those badasses that really enjoy the taste of strong black coffee. Strong to the taste, sweet with the punch, Chocolate Lovers got your back'
 };
 
+let ecuadorianEcstatic = {
+	coffee : 'Ecuadorian Ecstatic',
+    quantity : '1',
+    price : '16.99',
+    ground: 'Whole Bean',
+};
+
+let grandpaJoe = {
+	coffee : 'Grandpa Joe',
+    quantity : '1',
+    price : '12.99',
+    ground: 'Whole Bean',
+};
+
+// @purpose Set up localStorage key value pair for total items
+// @called onload of index.html
 function setCart() {
     localStorage.setItem('Total Products', '0');
 }
@@ -84,7 +87,7 @@ function showCart() {
 }
 
 // @purpose Visual change of cart icon according to user preference
-// @called when checkout, product, and individual product pages are loaded
+// @called onload of index.html, checkout.html, and individual product pages
 function showCart2() {
     var value = localStorage.getItem('Total Products');
 
@@ -125,17 +128,115 @@ function showCart2() {
     }
     return value;
 }
-// @purpose Adds updated product object to local storage
-// @called 'Add to cart' button is pressed
-function addProduct(productName, productObject) {
-    localStorage.setItem(productName, JSON.stringify(productObject));
 
-    let coffeeProfile = localStorage.getItem(productName);
-    let savedCoffee = JSON.parse(coffeeProfile);
-    console.log("Product name: ", savedCoffee.coffee);
-    console.log("Product price: ", savedCoffee.price);
-    console.log("Product quantity: ", savedCoffee.quantity);
-    console.log("Product ground: ", savedCoffee.ground);
+// @purpose Updates object value of total price according to user preference
+// @called 'Quantity' value is changed
+function setPrice12(productObject) {
+    var price = showPrice12();
+    productObject.price = price;
+    updateObject(productObject.coffee, productObject);
+}
+
+// @purpose Visual change of price according to user preference
+// @return New price according to quantity value
+// @called 'Quantity' value is changed
+function showPrice12() {
+    var select = document.getElementById('quantity');
+    var quantity = select.options[select.selectedIndex].value;
+
+    if (quantity == 1) {
+        newPrice = '12.99';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 2) {
+        newPrice = '25.98';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 3) {
+        newPrice = '38.97';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 4) {
+        newPrice = '51.96';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 5) {
+        newPrice = '64.95';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+}
+
+// @purpose Updates object value of total price according to user preference
+// @called 'Quantity' value is changed
+function setPrice14(productObject) {
+    var price = showPrice14();
+    productObject.price = price;
+    updateObject(productObject.coffee, productObject);
+}
+
+// @purpose Visual change of price according to user preference
+// @return New price according to quantity value
+// @called 'Quantity' value is changed
+function showPrice14() {
+    var select = document.getElementById('quantity');
+    var quantity = select.options[select.selectedIndex].value;
+
+    if (quantity == 1) {
+        newPrice = '14.99';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 2) {
+        newPrice = '29.98';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 3) {
+        newPrice = '44.97';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 4) {
+        newPrice = '59.96';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+
+    if (quantity == 5) {
+        newPrice = '74.95';
+        price = document.getElementById("individualproduct_price");
+        price.innerHTML = '$' + newPrice;
+        return newPrice;
+    }
+}
+
+// @purpose Updates object value of total price according to user preference
+// @called 'Quantity' value is changed
+function setPrice16(productObject) {
+    var price = showPrice16();
+    productObject.price = price;
+    updateObject(productObject.coffee, productObject);
 }
 
 // @purpose Visual change of price according to user preference
@@ -196,22 +297,6 @@ function setQuantity(productObject) {
     updateObject(productObject.coffee, productObject);
 }
 
-// @purpose Updates object value of total price according to user preference
-// @called 'Quantity' value is changed
-function setPrice16(productObject) {
-    var price = showPrice16();
-    productObject.price = price;
-    updateObject(productObject.coffee, productObject);
-}
-
-// @purpose Updates object value of total price according to user preference
-// @called 'Quantity' value is changed
-function setPrice14(productObject) {
-    var price = showPrice14();
-    productObject.price = price;
-    updateObject(productObject.coffee, productObject);
-}
-
 // @purpose Updates object value of ground according to user preference
 // @called 'Ground' value is changed
 function setGround(productObject) {
@@ -229,47 +314,17 @@ function setGround(productObject) {
     }
 }
 
-// @purpose Visual change of price according to user preference
-// @return New price according to quantity value
-// @called 'Quantity' value is changed
-function showPrice14() {
-    var select = document.getElementById('quantity');
-    var quantity = select.options[select.selectedIndex].value;
+// @purpose Adds updated product object to local storage
+// @called 'Add to cart' button is pressed
+function addProduct(productName, productObject) {
+    localStorage.setItem(productName, JSON.stringify(productObject));
 
-    if (quantity == 1) {
-        newPrice = '14.99';
-        price = document.getElementById("individualproduct_price");
-        price.innerHTML = '$' + newPrice;
-        return newPrice;
-    }
-
-    if (quantity == 2) {
-        newPrice = '29.98';
-        price = document.getElementById("individualproduct_price");
-        price.innerHTML = '$' + newPrice;
-        return newPrice;
-    }
-
-    if (quantity == 3) {
-        newPrice = '44.97';
-        price = document.getElementById("individualproduct_price");
-        price.innerHTML = '$' + newPrice;
-        return newPrice;
-    }
-
-    if (quantity == 4) {
-        newPrice = '59.96';
-        price = document.getElementById("individualproduct_price");
-        price.innerHTML = '$' + newPrice;
-        return newPrice;
-    }
-
-    if (quantity == 5) {
-        newPrice = '74.95';
-        price = document.getElementById("individualproduct_price");
-        price.innerHTML = '$' + newPrice;
-        return newPrice;
-    }
+    let coffeeProfile = localStorage.getItem(productName);
+    let savedCoffee = JSON.parse(coffeeProfile);
+    console.log("Product name: ", savedCoffee.coffee);
+    console.log("Product price: ", savedCoffee.price);
+    console.log("Product quantity: ", savedCoffee.quantity);
+    console.log("Product ground: ", savedCoffee.ground);
 }
 
 // @purpose Updates HTML with user preferences of added cart items
