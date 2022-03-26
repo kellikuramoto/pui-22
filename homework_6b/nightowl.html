@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 </head>
 
-<body class="products" onload="showCart2()">
+<body class="products" onload="showCart2(), carousel()">
     <header>
         <nav>
             <div id="nav-left-align">
@@ -141,37 +141,67 @@
             </div>
         </div>
     </div>
-
+    
     <div id="youmightlike">
-        <p>
+        <p id="youmightlike_title">
             You might also like
         </p>
 
-        <table id="table_youmightlike">
-            <tr>
-                <td>
-                    <img class="coffee1" src="images/2.png" alt="Image of coffee beans">
-                    <div class="youmightlike_products">
-                        <p class="product_like">Turkish Delight</p>
-                        <a href="turkishdelight.html">Shop</a>
-                    </div>
-                </td>
-                <td>
-                    <img class="coffee3" src="images/3.png" alt="Image of coffee beans">
-                    <div class="youmightlike_products">
-                        <p class="product_like">Ecuadorian's Ecstatic</p>
-                        <a href="ecuadorianecstatic.html">Shop</a>
-                    </div>
-                </td>
-                <td>
-                    <img class="coffee2" src="images/1.png" alt="Image of coffee beans">
-                    <div class="youmightlike_products">
-                        <p class="product_like">Night Owl</p>
-                        <a href="nightowl.html">Shop</a>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div>
+            <div class="youmightlike_slides">
+                <table id="table_youmightlike">
+                    <tr>
+                        <td>
+                            <img class="coffee2" src="images/2.png" alt="Image of coffee beans">
+                        </td>
+                        <td>
+                            <div class="youmightlike_products">
+                                <p class="product_like_name">Crazy Colombian</p>
+                                <p class="product_like_roast">Roast: Medium</p>
+                                <p class="product_like_flavor">Flavor: nutty / smoky / caramel</p>
+                                <a href="crazycolumbian.html">Shop</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="youmightlike_slides">
+                <table id="table_youmightlike">
+                    <tr>
+                        <td>
+                            <img class="coffee2" src="images/4.png" alt="Image of coffee beans">
+                        </td>
+                        <td>
+                            <div class="youmightlike_products">
+                                <p class="product_like_name">Turkish Delight</p>
+                                <p class="product_like_roast">Roast: Light</p>
+                                <p class="product_like_flavor">Flavor: cinnamon / vanilla / orange</p>
+                                <a href="turkishdelight.html">Shop<a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="youmightlike_slides">
+                <table id="table_youmightlike">
+                    <tr>
+                        <td>
+                            <img class="coffee2" src="images/3.png" alt="Image of coffee beans">
+                        </td>
+                        <td>
+                            <div class="youmightlike_products">
+                                <p class="product_like_name">Ecuadorian’s Estatic</p>
+                                <p class="product_like_roast">Roast: Dark</p>
+                                <p class="product_like_flavor">Flavor: toasty / buttery / toffee</p>
+                                <a href="ecuadorianestatic.html">Shop</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 
