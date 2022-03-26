@@ -22,5 +22,5 @@ EXTRA WORK: for Assignment 6b
 2. implemented filtering functionality on the product.html page
 - "Some interesting and useful JavaScript functionality for your website. The JS functionality must make sense for your site, and be sufficiently interesting. (max 3pts)"
 
-3. added manual advancing carousel to the individual product pages
+3. added automatic advancing carousel to the individual product pages
 - "Add a carousel on at least 1 Product Detail page that shows similar products. The carousel should be able to scroll left and right. (max 5 points)"

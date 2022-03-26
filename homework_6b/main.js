@@ -385,10 +385,15 @@ function showProducts() {
 
         coffeeNameQuantity.appendChild(coffeeNameQuantityValues);
 
+        let remove = document.createElement("button");
+        remove.innerHTML = "Remove";
+        remove.onclick = function() { removeProduct(storedCoffee);};
+
         var element = document.getElementById("current_cart");
         element.appendChild(coffeeNameQuantity);  
         element.appendChild(productTotal);  
         element.appendChild(ul);
+        element.appendChild(remove);
         }
     }
 }
@@ -474,4 +479,36 @@ function activeButton() {
         this.className += " active";
     });
     }
+}
+
+// @purpose shows 'You might like' products carousel
+// @called automatically when page loads
+var slideIndex = 0;
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("youmightlike_slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 2000); 
+}
+
+// @purpose updates the Cart page when user removes products
+// @called when remove button is clicked
+function removeProduct(productObject) {
+    localStorage.removeItem(productObject);
+    var element = document.getElementById("current_cart");
+    element.innerHTML = "";
+
+    var elementSubTotal = document.getElementById('subtotal');
+    elementSubTotal.innerHTML = "Subtotal $";
+
+    var elementTotal = document.getElementById('total');
+    elementTotal.innerHTML = "Total $";
+    
+    showProducts();
+    getTotal();
 }
