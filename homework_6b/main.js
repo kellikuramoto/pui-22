@@ -432,10 +432,10 @@ function getTotal() {
 
 // @purpose Updates products shown according to filter
 // @called filter buttons are selected
-filterSelection("all")
+filterSelection("all");
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("filterDiv");
+  x = document.getElementsByClassName("filter_products");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
     removeClass(x[i], "show");
@@ -465,7 +465,7 @@ function removeClass(element, name) {
 }
 
 function activeButton() {
-    var btnContainer = document.getElementById("myBtnContainer");
+    var btnContainer = document.getElementById("filter_buttons");
     var btns = btnContainer.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(){
