@@ -430,7 +430,7 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1} 
   x[slideIndex-1].style.display = "block"; 
-  setTimeout(carousel, 2200); 
+  setTimeout(carousel, 3000); 
 }
 
 // @purpose updates the Cart page when user removes products
