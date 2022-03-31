@@ -7,6 +7,7 @@ nav {
 }
 
 #nav-left-align {
+    padding-left: 20px;
     display: inline;
     float: left;
 }
@@ -14,6 +15,7 @@ nav {
 #nav-right-align {
     display: inline;
     float: right;
+    padding-right: 20px;
 }
 
 #nav-center-align {
@@ -42,10 +44,6 @@ nav a:hover {
     font-family: 'Sedgwick Ave', cursive;
     font-size: 30px;
     text-decoration: none;
-}
-
-#cart {
-    width: 30px;
 }
 
 /* HOME PAGE STYLING */
@@ -633,9 +631,27 @@ h4 {
     font-family: 'DM Sans', sans-serif;
     }
 
+.parent {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
 #cart_img {
-    max-width: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 30px;
     height: auto;
+}
+
+#cart_products {
+    position: relative;
+    left: -15px;
+    top: -15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    visibility: hidden;
 }
 
 #cardinfo td, #cartinfo td{
