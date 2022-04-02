@@ -458,6 +458,8 @@ function removeProduct(productObject) {
     getTotal();
 }
 
+// @purpose reloads page for individual product
+// @called when individual product is clicked on products page
 function loadProduct(productLink) {
     window.location.href = productLink;
 }
