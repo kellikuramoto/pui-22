@@ -146,14 +146,14 @@ h1 {
 
 .coffee1, .coffee2, .coffee3, .coffee4 {
     width: auto; 
-    max-height: 175px;
+    max-height: 150px;
     padding: 20px;
 }
 
 #table_products {
     margin-left: auto;
     margin-right: auto;
-    border-spacing: 50px 20px;
+    border-spacing: 40px 40px;
     margin-bottom: 6%;
 }
 
@@ -165,18 +165,7 @@ h1 {
 
 .product_description a {
     text-decoration: none;
-    font-size: 18px;
     color: #361706;
-    /* font-weight: bold; */
-    display: block;
-    text-align: center;
-}
-
-.product_description a:hover {
-    font-size: 18px;
-    text-decoration: 2px dotted underline;
-    font-weight: bold;
-    display: block;
     text-align: center;
 }
 
@@ -191,6 +180,19 @@ h1 {
 
 .product_price {
     font-size: 16px;
+}
+
+.product_button {
+    border: none;
+    background-color: transparent;
+}
+
+.product_button a {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.product_button:hover {
+    outline: 2px dotted #361706;
 }
 
 /* INDIVIDUAL PRODUCT PAGE STYLING */
@@ -344,8 +346,8 @@ table#flavor_profile th, td {
     font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     width: 50%;
-    margin-top: 8%;
-    margin-bottom: 1%;
+    margin-top: 6%;
+    margin-bottom: 6%;
     margin-left: 25%;
     float: left;
 }
@@ -359,7 +361,6 @@ table#flavor_profile th, td {
     margin-left: auto;
     margin-right: auto;
     border-spacing: 50px 20px;
-    margin-bottom: 2%;
 }
 
 .product_like_name {

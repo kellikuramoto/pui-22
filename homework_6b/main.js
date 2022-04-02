@@ -3,6 +3,7 @@ let chocolateLover = {
     quantity : '1',
     price : '14.99',
     ground: 'Whole Bean',
+    link: 'chocolatelover.html',
 };
 
 let crazyColombian = {
@@ -10,6 +11,7 @@ let crazyColombian = {
     quantity : '1',
     price : '16.99',
     ground: 'Whole Bean',
+    link: 'crazycolumbian.html',
 };
 
 let ecuadorianEcstatic = {
@@ -17,6 +19,7 @@ let ecuadorianEcstatic = {
     quantity : '1',
     price : '16.99',
     ground: 'Whole Bean',
+    link: 'ecuadorianecstatic.html'
 };
 
 let grandpaJoe = {
@@ -24,6 +27,7 @@ let grandpaJoe = {
     quantity : '1',
     price : '12.99',
     ground: 'Whole Bean',
+    link: 'grandpajoe.html',
 };
 
 let turkishDelight = {
@@ -31,6 +35,7 @@ let turkishDelight = {
     quantity : '1',
     price : '16.99',
     ground: 'Whole Bean',
+    link: 'turkishdelight.html',
 };
 
 let electricEthiopian = {
@@ -38,6 +43,7 @@ let electricEthiopian = {
     quantity : '1',
     price : '16.99',
     ground: 'Whole Bean',
+    link: 'electricethiopian.html',
 };
 
 let nightOwl = {
@@ -45,6 +51,7 @@ let nightOwl = {
     quantity : '1',
     price : '12.99',
     ground: 'Whole Bean',
+    link: 'nightowl.html',
 };
 
 let purelyPeruvian = {
@@ -52,6 +59,7 @@ let purelyPeruvian = {
     quantity : '1',
     price : '14.99',
     ground: 'Whole Bean',
+    link: 'purelyperuvian.html',
 };
 
 // @purpose Set up localStorage key value pair for total items
@@ -448,4 +456,8 @@ function removeProduct(productObject) {
     
     showProducts();
     getTotal();
+}
+
+function loadProduct(productLink) {
+    window.location.href = productLink;
 }
