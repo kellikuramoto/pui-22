@@ -124,7 +124,7 @@ let Shady = {
 
 let Prima = {
     name: "Prima",
-    full: "",
+    full: "La Prima Espresso",
     description: "La Prima Espresso Company is a Pittsburgh-based certified organic roaster offering exceptional Italian-style coffee and espresso. Additionally, La Prima at CMU serves cold brew, nitro, chai and matcha green tea lattes, frizz coffee, and more. Made-daily pastries are available from Mediterra Bakehouse, as well as grab-and-go sandwiches and vegetarian meals from Common Plea Catering, and fresh salads from Fifth Season. Fair-trade, organic whole bean coffee is also available for purchase.",
     website: "https://apps.studentaffairs.cmu.edu/dining/conceptinfo/?page=conceptDetails&conceptId=94", 
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.4736483006754!2d-79.94807804960544!3d40.442652561886284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f22122826ad1%3A0x84738df3731baf08!2sLa%20Prima%20Espresso%20Company%20-%20CMU!5e0!3m2!1sen!2sus!4v1649799594425!5m2!1sen!2sus" 
@@ -352,7 +352,17 @@ function addLetter(letter) {
         guessRows[currentRow][currentTile] = letter;
         currentTile += 1;
     }
- }
+}
+
+function deleteLetter() {
+    if (currentTile > 0) {
+        currentTile -= 1;
+        const tile = document.getElementById('row-' + currentRow + '-tile-' + currentTile);
+        tile.innerHTML = '';
+        guessRows[currentRow][currentTile] = '';
+        tile.setAttribute('data', '');
+    }
+}
 
 function handleClick(key) {
     console.log("Clicked " + key);
@@ -381,21 +391,10 @@ document.body.addEventListener('keydown', function(event) {
     addLetter(event.key.toUpperCase());
 });
 
-function deleteLetter() {
-    if (currentTile > 0) {
-        currentTile -= 1;
-        const tile = document.getElementById('row-' + currentRow + '-tile-' + currentTile);
-        tile.innerHTML = '';
-        guessRows[currentRow][currentTile] = '';
-        tile.setAttribute('data', '');
-    }
-}
-
 function tileFeedback() {
     const rowTiles = document.querySelector('#row-' + currentRow).childNodes;
 
     rowTiles.forEach((tile, index) => {
-        console.log('tile' + tile + ' and index' + index)
         const dataLetter = tile.getAttribute('data')
         const upperWordle = wordle.toUpperCase();
         
@@ -411,6 +410,26 @@ function tileFeedback() {
     })
 }
 
+function keyboardFeedback() {
+    const rowTiles = document.querySelector('#row-' + currentRow).childNodes;
+
+    rowTiles.forEach((tile, index) => {
+        const dataLetter = tile.getAttribute('data')
+        let key = document.getElementById(dataLetter);
+        const upperWordle = wordle.toUpperCase();
+        
+        if (dataLetter == upperWordle[index]) {
+            key.setAttribute('class', 'green-overlay')
+        }
+        else if (upperWordle.includes(dataLetter)) {
+            key.setAttribute('class', 'yellow-overlay')
+        }
+        else {
+            key.setAttribute('class', 'darkgrey-overlay')
+        }
+    })
+}
+
 function checkRows() {
     const guess = guessRows[currentRow].join('');
     const upperWordle = wordle.toUpperCase();
@@ -419,6 +438,7 @@ function checkRows() {
 
     if (currentTile > 4) {
         tileFeedback();
+        keyboardFeedback();
         if (upperWordle == guess) {
             showInfo();
             gameOver = true;

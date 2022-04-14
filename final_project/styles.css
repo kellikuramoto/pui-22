@@ -96,6 +96,12 @@ body {
     color: white;
     border:none !important;
 }
+
+.darkgrey-overlay {
+    background-color: #6d6e71 !important;
+    color: white;
+    border:none !important;
+}
 .yellow-overlay {
     background-color: #F2A900 !important;
     color: white;
