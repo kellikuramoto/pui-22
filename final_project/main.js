@@ -326,7 +326,33 @@ const guessRows = [
 let currentRow = 0;
 let currentTile = 0;
 let gameOver = false;
+let gameMode = [false, false]
+console.log('Game mode: ' + gameMode);
+let [dark, color] = gameMode;
 
+
+function checkDark(checkbox) {
+    if (checkbox.checked) {
+        gameMode[0] = true;
+        console.log('Game mode dark check: ' + gameMode);
+    }
+    else {
+        gameMode[0] = false;
+        console.log('Game mode dark uncheck: ' + gameMode);
+
+    }
+}
+
+function checkColor(checkbox) {
+    if (checkbox.checked) {
+        gameMode[1] = true;
+        console.log('Game mode color check: ' + gameMode);
+    }
+    else {
+        gameMode[1] = false;
+        console.log('Game mode color uncheck: ' + gameMode);
+    }
+}
 let word = getWord();
 let [wordle, wordleObject] = word;
 
@@ -398,14 +424,77 @@ function tileFeedback() {
         const dataLetter = tile.getAttribute('data')
         const upperWordle = wordle.toUpperCase();
         
-        if (dataLetter == upperWordle[index]) {
-            tile.setAttribute('class', 'tile green-overlay animate__animated animate__flipInX')
+        /* Regular Mode */  
+        if (gameMode[0] == false && gameMode[1] == false) {
+            document.body.style.background = '#FFFFFF';
+            document.getElementById('tiles').style.color = '#000000';
+            document.getElementById('keyboard').style.color = '#000000';
+            document.getElementById('info').style.color = '#000000';
+
+            if (dataLetter == upperWordle[index]) {
+                tile.setAttribute('class', 'tile green-overlay animate__animated animate__flipInX')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                tile.setAttribute('class', 'tile yellow-overlay animate__animated animate__flipInX')
+            }
+            else {
+                tile.setAttribute('class', 'tile grey-overlay animate__animated animate__flipInX')
+            }
         }
-        else if (upperWordle.includes(dataLetter)) {
-            tile.setAttribute('class', 'tile yellow-overlay animate__animated animate__flipInX')
+
+        /* Dark Mode */  
+        if (gameMode[0] == true && gameMode[1] == false) {
+            document.body.style.background = '#000000';
+            document.getElementById('tiles').style.color = '#FFFFFF';
+            document.getElementById('keyboard').style.color = '#FFFFFF';
+            document.getElementById('info').style.color = '#FFFFFF';
+
+            if (dataLetter == upperWordle[index]) {
+                tile.setAttribute('class', 'tile green-overlay animate__animated animate__flipInX')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                tile.setAttribute('class', 'tile yellow-overlay animate__animated animate__flipInX')
+            }
+            else {
+                tile.setAttribute('class', 'tile grey-overlay animate__animated animate__flipInX')
+            }
         }
-        else {
-            tile.setAttribute('class', 'tile grey-overlay animate__animated animate__flipInX')
+
+        /* Colorblind Mode */ 
+        if (gameMode[0] == false && gameMode[1] == true) {
+            document.body.style.background = '#FFFFFF';
+            document.getElementById('tiles').style.color = '#000000';
+            document.getElementById('keyboard').style.color = '#000000';
+            document.getElementById('info').style.color = '#000000';
+
+            if (dataLetter == upperWordle[index]) {
+                tile.setAttribute('class', 'tile blue-overlay animate__animated animate__flipInX')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                tile.setAttribute('class', 'tile orange-overlay animate__animated animate__flipInX')
+            }
+            else {
+                tile.setAttribute('class', 'tile grey-overlay animate__animated animate__flipInX')
+            }
+        }
+
+        /* Colorblind Dark Mode */
+        if (gameMode[0] == true && gameMode[1] == true) {
+            document.body.style.background = '#000000';
+            document.getElementById('tiles').style.color = '#FFFFFF';
+            document.getElementById('keyboard').style.color = '#FFFFFF';
+            document.getElementById('info').style.color = '#FFFFFF';
+
+
+            if (dataLetter == upperWordle[index]) {
+                tile.setAttribute('class', 'tile blue-overlay animate__animated animate__flipInX')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                tile.setAttribute('class', 'tile orange-overlay animate__animated animate__flipInX')
+            }
+            else {
+                tile.setAttribute('class', 'tile grey-overlay animate__animated animate__flipInX')
+            }
         }
     })
 }
@@ -418,14 +507,30 @@ function keyboardFeedback() {
         let key = document.getElementById(dataLetter);
         const upperWordle = wordle.toUpperCase();
         
-        if (dataLetter == upperWordle[index]) {
-            key.setAttribute('class', 'green-overlay')
+        /* Regular Mode */  
+        if (gameMode[0] == false && gameMode[1] == false) {
+            if (dataLetter == upperWordle[index]) {
+                key.setAttribute('class', 'green-overlay')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                key.setAttribute('class', 'yellow-overlay')
+            }
+            else {
+                key.setAttribute('class', 'darkgrey-overlay')
+            }
         }
-        else if (upperWordle.includes(dataLetter)) {
-            key.setAttribute('class', 'yellow-overlay')
-        }
-        else {
-            key.setAttribute('class', 'darkgrey-overlay')
+
+        /* Colorblind Mode */ 
+        if (gameMode[0] == false && gameMode[1] == true) {
+            if (dataLetter == upperWordle[index]) {
+                key.setAttribute('class', 'blue-overlay')
+            }
+            else if (upperWordle.includes(dataLetter)) {
+                key.setAttribute('class', 'orange-overlay')
+            }
+            else {
+                key.setAttribute('class', 'darkgrey-overlay')
+            }
         }
     })
 }
@@ -512,3 +617,21 @@ function drawTiles() {
 
 drawTiles();
 drawKeyBoard();
+
+var modal = document.getElementById("settings");
+var button = document.getElementById("button");
+var close = document.getElementsByClassName("close")[0];
+
+button.onclick = function() {
+    modal.style.display = "block";
+}
+
+close.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
