@@ -368,6 +368,19 @@ function handleClick(key) {
     addLetter(key);
 }
 
+document.body.addEventListener('keydown', function(event) {
+    console.log(event);
+    if (event.key === 'Backspace') {
+        deleteLetter();
+        return;
+    }
+    else if (event.key === 'Enter') {
+        checkRows();
+        return;
+    }
+    addLetter(event.key.toUpperCase());
+});
+
 function deleteLetter() {
     if (currentTile > 0) {
         currentTile -= 1;
@@ -434,16 +447,26 @@ function drawKeyBoard() {
     }
 }
 
+function loadWebsite(website) {
+    window.location.href = website;
+}
+
 function showInfo() {
     document.getElementById('game').style.width = '45%';
     document.getElementById('game').style.float = 'left';
-    document.getElementById('game').style.padding = '3%';
+    document.getElementById('game').style.padding = '2%';
 
-    document.getElementById('info').style.display = 'contents';
+    document.getElementById('info').style.width = '45%';
+    document.getElementById('info').style.float = 'right';
+    document.getElementById('info').style.padding = '2%';
+
+    document.getElementById('whatisit').style.display = 'contents';
     document.getElementById('whatisit-full').innerHTML = wordleObject.full;
+    document.getElementById('whatisit-full').style.color = '#A6192E';
     document.getElementById('whatisit-info').innerHTML = wordleObject.description;
-    document.getElementById('website').setAttribute('onclick', "window.open(" + wordleObject.website + ", '_blank'");
+    document.getElementById('website').setAttribute('onclick', "window.location.href='" + wordleObject.website + "';");
     if ('map' in wordleObject) {
+        document.getElementById('whereisit').style.display = 'contents';
         document.getElementById('whereisit-map').setAttribute('src', wordleObject.map);
     }
 }
