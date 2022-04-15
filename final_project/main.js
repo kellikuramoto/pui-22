@@ -1,3 +1,4 @@
+/* CONSTANTS */
 let ANSYS = {
     name: "ANSYS",
     full: "ANSYS Hall",
@@ -323,6 +324,22 @@ const guessRows = [
     ['', '', '', '', '']
 ]
 
+let played = 0;
+let win = 0;
+let curStreak = 0;
+let maxStreak = 0;
+
+/* @purpose set localStorage to save game statistics
+   @called when index.html is loaded */
+function statistics() {
+    localStorage. clear();
+    localStorage.setItem('Played', played);
+    localStorage.setItem('Win %', '0%');
+    localStorage.setItem('Current Streak', curStreak);
+    localStorage.setItem('Max Streak', maxStreak);
+    console.log(localStorage);
+}
+
 let currentRow = 0;
 let currentTile = 0;
 let gameOver = false;
@@ -330,45 +347,23 @@ let gameMode = [false, false]
 console.log('Game mode: ' + gameMode);
 let [dark, color] = gameMode;
 
-
-function checkDark(checkbox) {
-    if (checkbox.checked) {
-        gameMode[0] = true;
-        console.log('Game mode dark check: ' + gameMode);
-    }
-    else {
-        gameMode[0] = false;
-        console.log('Game mode dark uncheck: ' + gameMode);
-
-    }
-}
-
-function checkColor(checkbox) {
-    if (checkbox.checked) {
-        gameMode[1] = true;
-        console.log('Game mode color check: ' + gameMode);
-    }
-    else {
-        gameMode[1] = false;
-        console.log('Game mode color uncheck: ' + gameMode);
-    }
-}
 let word = getWord();
 let [wordle, wordleObject] = word;
 
 console.log("Wordle: " + wordle);
 console.log("Wordle Object: " + wordleObject);
 
-
+/* @purpose get random word for words list
+   @called when main.js is loaded */
 function getWord() {
     let rand = Math.floor(Math.random() * words.length)
     let wordObject = words[rand];
-    console.log("Wordle Object inside function: " + wordObject);
     let word = wordObject.name;
-    console.log("Wordle inside function: " + word);
     return [word, wordObject];
 }
 
+/* @purpose add letter to tile based on user preference
+   @called when keyboard on screen or on computer is clicked */
 function addLetter(letter) {
     if (currentTile < 5 && currentRow < 6) {
         const tile = document.getElementById('row-' + currentRow + '-tile-' + currentTile);
@@ -380,6 +375,8 @@ function addLetter(letter) {
     }
 }
 
+/* @purpose delete previous letter shown on tile
+   @called when '<<' tile on screen or 'Delete' tile on computer is clicked */
 function deleteLetter() {
     if (currentTile > 0) {
         currentTile -= 1;
@@ -390,8 +387,9 @@ function deleteLetter() {
     }
 }
 
+/* @purpose determines which function to call based on tile clicked
+   @called when tile on screen or on computer is clicked */
 function handleClick(key) {
-    console.log("Clicked " + key);
     if (key === '«') {
         deleteLetter();
         return;
@@ -404,8 +402,9 @@ function handleClick(key) {
     addLetter(key);
 }
 
+/* @purpose adds event listener to keyboard input
+   @called when keyboard on computer is clicked */
 document.body.addEventListener('keydown', function(event) {
-    console.log(event);
     if (event.key === 'Backspace') {
         deleteLetter();
         return;
@@ -417,6 +416,8 @@ document.body.addEventListener('keydown', function(event) {
     addLetter(event.key.toUpperCase());
 });
 
+/* @purpose updates tiles with colors based on chosen word
+   @called when 'Enter' tile on screen or 'Return' tile on computer is clicked */
 function tileFeedback() {
     const rowTiles = document.querySelector('#row-' + currentRow).childNodes;
 
@@ -499,6 +500,8 @@ function tileFeedback() {
     })
 }
 
+/* @purpose updates keyboard tiles with colors based on chosen word
+   @called when 'Enter' tile on screen or 'Return' tile on computer is clicked */
 function keyboardFeedback() {
     const rowTiles = document.querySelector('#row-' + currentRow).childNodes;
 
@@ -535,6 +538,28 @@ function keyboardFeedback() {
     })
 }
 
+/* @purpose updates mode based on user preference
+   @called when mode is toggled in settings */
+function checkDark(checkbox) {
+    if (checkbox.checked) {
+        gameMode[0] = true;
+    }
+    else {
+        gameMode[0] = false;
+    }
+}
+
+function checkColor(checkbox) {
+    if (checkbox.checked) {
+        gameMode[1] = true;
+    }
+    else {
+        gameMode[1] = false;
+    }
+}
+
+/* @purpose checks the word has entered, calls feedback functions and updates localStorage
+   @called when 'Enter' tile on screen or 'Return' tile on computer is clicked */
 function checkRows() {
     const guess = guessRows[currentRow].join('');
     const upperWordle = wordle.toUpperCase();
@@ -547,10 +572,33 @@ function checkRows() {
         if (upperWordle == guess) {
             showInfo();
             gameOver = true;
+
+            played += 1;
+            win += 1;
+            localStorage.setItem('Played', played);
+
+            curStreak += 1;
+            localStorage.setItem('Current Streak', curStreak);
+            if (curStreak > maxStreak) {
+                maxStreak = curStreak;
+                localStorage.setItem('Max Streak', maxStreak);
+            }
+
+            let winPercent = (win / played)* 100;
+            let winString = winPercent + "%";
+            localStorage.setItem('Win %', winString);
+            console.log("Game won: " + localStorage);
         }
         else {
             if (currentRow >= 5) {
                 gameOver = true;
+                played += 1;
+                localStorage.setItem('Played', played);
+
+                let winPercent = (win / played)* 100;
+                let winString = winPercent + "%";
+                localStorage.setItem('Win %', winString);
+                console.log("Game finished: " + localStorage);
             }
             if (currentRow < 5) {
                 currentRow += 1;
@@ -560,22 +608,12 @@ function checkRows() {
     }
 }
 
-function drawKeyBoard() {
-    const keyboardDiv = document.getElementById('keyboard');
-    for (let i = 0; i < keys.length; i += 1) {
-        let key = keys[i];
-        const buttonElem = document.createElement('button');
-        buttonElem.innerText = key;
-        buttonElem.setAttribute('id', key);
-        buttonElem.addEventListener('click', function() {handleClick(key)});
-        keyboardDiv.append(buttonElem);
-    }
-}
-
 function loadWebsite(website) {
     window.location.href = website;
 }
 
+/* @purpose shows information about wordle word
+   @called when word is guessed by user */
 function showInfo() {
     document.getElementById('game').style.width = '45%';
     document.getElementById('game').style.float = 'left';
@@ -596,6 +634,22 @@ function showInfo() {
     }
 }
 
+/* @purpose draws keyboard
+   @called when main.js is loaded */
+   function drawKeyBoard() {
+    const keyboardDiv = document.getElementById('keyboard');
+    for (let i = 0; i < keys.length; i += 1) {
+        let key = keys[i];
+        const buttonElem = document.createElement('button');
+        buttonElem.innerText = key;
+        buttonElem.setAttribute('id', key);
+        buttonElem.addEventListener('click', function() {handleClick(key)});
+        keyboardDiv.append(buttonElem);
+    }
+}
+
+/* @purpose draws tiles
+   @called when main.js is loaded */
 function drawTiles() {
     let r;
     const tileDiv = document.getElementById('tiles');
@@ -615,9 +669,6 @@ function drawTiles() {
     }
 }
 
-drawTiles();
-drawKeyBoard();
-
 var modal = document.getElementById("settings");
 var button = document.getElementById("button");
 var close = document.getElementsByClassName("close")[0];
@@ -635,3 +686,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+drawTiles();
+drawKeyBoard();
