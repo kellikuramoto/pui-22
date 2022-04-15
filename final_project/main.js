@@ -1,4 +1,4 @@
-/* CONSTANTS */
+/* ------------------------------------------ CONSTANTS ----------------------------------------- */
 let ANSYS = {
     name: "ANSYS",
     full: "ANSYS Hall",
@@ -332,7 +332,6 @@ let maxStreak = 0;
 /* @purpose set localStorage to save game statistics
    @called when index.html is loaded */
 function statistics() {
-    localStorage. clear();
     localStorage.setItem('Played', played);
     localStorage.setItem('Win %', '0%');
     localStorage.setItem('Current Streak', curStreak);
@@ -340,12 +339,19 @@ function statistics() {
     console.log(localStorage);
 }
 
+/* --------------------------------- GAME VARIABLES AND FUNCTIONS ------------------------------- */
 let currentRow = 0;
 let currentTile = 0;
 let gameOver = false;
 let gameMode = [false, false]
 console.log('Game mode: ' + gameMode);
 let [dark, color] = gameMode;
+
+function restart() {
+    window.location.reload();
+    console.log("Restart");
+    console.log(localStorage);
+}
 
 let word = getWord();
 let [wordle, wordleObject] = word;
@@ -587,7 +593,8 @@ function checkRows() {
             let winPercent = (win / played)* 100;
             let winString = winPercent + "%";
             localStorage.setItem('Win %', winString);
-            console.log("Game won: " + localStorage);
+            console.log("Game won: ");
+            console.log(localStorage);
         }
         else {
             if (currentRow >= 5) {
@@ -598,7 +605,8 @@ function checkRows() {
                 let winPercent = (win / played)* 100;
                 let winString = winPercent + "%";
                 localStorage.setItem('Win %', winString);
-                console.log("Game finished: " + localStorage);
+                console.log("Game finished: ");
+                console.log(localStorage);
             }
             if (currentRow < 5) {
                 currentRow += 1;
