@@ -26,6 +26,7 @@ body {
 
 h1 {
     display: inline;
+    color: #A6192E;
 }
 
 .title {
@@ -244,7 +245,6 @@ h1 {
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }

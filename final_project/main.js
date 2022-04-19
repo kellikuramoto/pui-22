@@ -324,15 +324,30 @@ const guessRows = [
     ['', '', '', '', '']
 ]
 
-let played = 0;
-let win = 0;
-let curStreak = 0;
-let maxStreak = 0;
+console.log(localStorage);
+
+if (localStorage.length === 0) {
+    console.log("entered null");
+    let played = 0;
+    let win = 0;
+    let curStreak = 0;
+    let maxStreak = 0;
+    statistics(played, win, curStreak, maxStreak);
+}
+else {
+    console.log("entered else");
+    let played = localStorage.getItem('Played');
+    let win = localStorage.getItem('Win');
+    let curStreak = localStorage.getItem('Current Streak');
+    let maxStreak = localStorage.getItem('Max Streak');
+    statistics(played, win, curStreak, maxStreak);
+}
 
 /* @purpose set localStorage to save game statistics
    @called when index.html is loaded */
-function statistics() {
+function statistics(played, win, curStreak, maxStreak) {
     localStorage.setItem('Played', played);
+    localStorage.setItem('Win', win);
     localStorage.setItem('Win %', '0%');
     localStorage.setItem('Current Streak', curStreak);
     localStorage.setItem('Max Streak', maxStreak);
@@ -411,15 +426,18 @@ function handleClick(key) {
 /* @purpose adds event listener to keyboard input
    @called when keyboard on computer is clicked */
 document.body.addEventListener('keydown', function(event) {
-    if (event.key === 'Backspace') {
+    let key = event.key;
+    if (key === 'Backspace') {
         deleteLetter();
         return;
     }
-    else if (event.key === 'Enter') {
+    else if (key === 'Enter') {
         checkRows();
         return;
     }
-    addLetter(event.key.toUpperCase());
+    else if (keys.includes(key.toUpperCase())) {
+        addLetter(key.toUpperCase());
+    }
 });
 
 /* @purpose updates tiles with colors based on chosen word
@@ -516,8 +534,9 @@ function keyboardFeedback() {
         let key = document.getElementById(dataLetter);
         const upperWordle = wordle.toUpperCase();
         
-        /* Regular Mode */  
-        if (gameMode[0] == false && gameMode[1] == false) {
+        /* Regular and Dark Mode */  
+        if ((gameMode[0] == false && gameMode[1] == false) || 
+            (gameMode[0] == true && gameMode[1] == false))  {
             if (dataLetter == upperWordle[index]) {
                 key.setAttribute('class', 'green-overlay')
             }
@@ -579,33 +598,51 @@ function checkRows() {
             showInfo();
             gameOver = true;
 
-            played += 1;
-            win += 1;
-            localStorage.setItem('Played', played);
+            let played = localStorage.getItem('Played');
+            let playedInt = parseInt(played);
+            let win = localStorage.getItem('Win');
+            let winInt = parseInt(win);
+            
+            playedInt += 1;
+            winInt += 1;
+            localStorage.setItem('Played', playedInt);
+            localStorage.setItem('Win', winInt);
 
-            curStreak += 1;
-            localStorage.setItem('Current Streak', curStreak);
-            if (curStreak > maxStreak) {
-                maxStreak = curStreak;
-                localStorage.setItem('Max Streak', maxStreak);
+            let curStreak = localStorage.getItem('Current Streak');
+            let curStreakInt = parseInt(curStreak);
+            let maxStreak = localStorage.getItem('Max Streak');
+            let maxStreakInt = parseInt(maxStreak);
+
+            curStreakInt += 1;
+            localStorage.setItem('Current Streak', curStreakInt);
+            if (curStreakInt > maxStreakInt) {
+                maxStreakInt = curStreakInt;
+                localStorage.setItem('Max Streak', maxStreakInt);
             }
 
-            let winPercent = (win / played)* 100;
+            let winPercent = (winInt / playedInt)* 100;
             let winString = winPercent + "%";
             localStorage.setItem('Win %', winString);
-            console.log("Game won: ");
+
             console.log(localStorage);
         }
         else {
             if (currentRow >= 5) {
                 gameOver = true;
-                played += 1;
-                localStorage.setItem('Played', played);
+                let played = localStorage.getItem('Played');
+                let playedInt = parseInt(played);
+                playedInt += 1;
+                localStorage.setItem('Played', playedInt);
 
-                let winPercent = (win / played)* 100;
+                let win = localStorage.getItem('Win');
+                let winInt = parseInt(win);
+
+                let winPercent = (winInt / playedInt)* 100;
                 let winString = winPercent + "%";
                 localStorage.setItem('Win %', winString);
-                console.log("Game finished: ");
+
+                localStorage.setItem('Current Streak', 0);
+
                 console.log(localStorage);
             }
             if (currentRow < 5) {
@@ -697,3 +734,4 @@ window.onclick = function(event) {
 
 drawTiles();
 drawKeyBoard();
+
