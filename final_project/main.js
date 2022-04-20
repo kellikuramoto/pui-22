@@ -359,7 +359,6 @@ let currentRow = 0;
 let currentTile = 0;
 let gameOver = false;
 let gameMode = [false, false]
-console.log('Game mode: ' + gameMode);
 let [dark, color] = gameMode;
 
 function restart() {
