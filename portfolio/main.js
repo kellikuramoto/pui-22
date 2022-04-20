@@ -118,23 +118,31 @@ function loadInfo() {
 	else {
 		document.getElementById('description').style.color = '#312C30';
 		
-		document.getElementById(projects[currentFrame].indicator).style.backgroundColor = '#312C30';
+		document.getElementById(projects[currentFrame].indicator).style.backgroundColor = projects[currentFrame].accent;
 
 		document.getElementById('kuramoto').style.color = '#312C30';
 		document.getElementById('about').style.color = '#312C30';
 	}
 }
 
+function clickInfo(newFrame) {
+	currentFrame = newFrame;
+	loadInfo();
+}
+
+document.getElementById('sellinglater-indicator').onclick = function() {clickInfo(0)};
+document.getElementById('xpresso-indicator').onclick = function() {clickInfo(1)};
+document.getElementById('tartordle-indicator').onclick = function() {clickInfo(2)};
+document.getElementById('dei-indicator').onclick = function() {clickInfo(3)};
+
 function hideFeedback() {
-    var left = document.getElementById("left");
-    left.style.visibility = 'hidden';
+    document.getElementById("left").style.visibility = 'hidden';
 }
 
 function showFeedback() {
-    var left = document.getElementById("left");
-    left.style.visibility = 'visible';
+    document.getElementById("left").style.visibility = 'visible';
 }
 
-document.getElementById("casestudy").addEventListener("onmouseover", showFeedback());
-
-document.getElementById("casestudy").addEventListener("onmouseout", hideFeedback());
+function cover() {
+	document.getElementById("left").width = '100%';
+}

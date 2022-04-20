@@ -97,17 +97,10 @@ h1 {
 }
 
 #left{
-    width: 0.5%;
-    height: 90vh;
+    width: 1%;
+    height: 100vh;
     float: left;
     background-color: #7B9741;
     visibility: hidden;
-}
-
-#right{
-    width: 0.5%;
-    height: 90vh;
-    background-color: #62666A;
-    float: right;
-    visibility: hidden;
+    z-index: 9999;
 }
