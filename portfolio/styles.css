@@ -120,7 +120,7 @@ h2 {
 
 #bio {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
 }
 
 #bio-img {
@@ -141,12 +141,27 @@ h2 {
 }
 
 #work {
-    border-left: 3px solid #312C30;
+    border-left: 2px solid #312C30;
+}
+
+#work table {
+    position: relative;
 }
 
 #work td {
     padding-bottom: 60px;
     padding-left: 20px;
+}
+
+.timeline {
+    border-radius: 25px;
+    background: #BBBCBC;
+    padding: 3px; 
+    width: 12px;
+    height: 4px; 
+    position: relative;
+    left: -33px;
+    bottom: -28px;
 }
 
 .date {
@@ -155,14 +170,46 @@ h2 {
 
 .company {
     font-family: 'Fahkwang', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .job {
-    font-weight: 'medium';
+    font-weight: 500;
     font-size: 18px;
 }
 
 .description {
     font-size: 14px;
+}
+
+#costar .timeline {
+    background: #2152A1;
+}
+
+#costar .company {
+    color: #2152A1;
+}
+
+#onecommons .timeline {
+    background: #62B6EA;
+}
+
+#onecommons .company {
+    color: #62B6EA;
+}
+
+#csacademy .timeline {
+    background: #5E54DF;
+}
+
+#csacademy .company {
+    color: #5E54DF;
+}
+
+#cmu .timeline {
+    background: #A6192E;
+}
+
+#cmu .company {
+    color: #A6192E;
 }
