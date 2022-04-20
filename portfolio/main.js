@@ -146,3 +146,10 @@ function showFeedback() {
 function cover() {
 	document.getElementById("left").width = '100%';
 }
+
+let imgs = document.getElementsByClassName('animate__animated animate__pulse');
+
+for (let i = 0; i < imgs.length; i += 1) {
+	imgs[i].style.setProperty('--animate-duration', '3s');
+	// imgs[i].style.animation =  'infinite';
+}
