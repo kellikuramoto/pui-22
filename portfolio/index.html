@@ -16,7 +16,6 @@
 </head>
 
 <body onload="loadInfo()">
-    <div id="left"></div>
     <nav>
         <a id="kuramoto" href="index.html">KURAMOTO</a>
         <a id="about" href="about.html">ABOUT</a>
@@ -24,22 +23,22 @@
 
     <div class="content"> 
         <div id="info">
-            <h1></h1>
+            <h1 class="animate__animated animate__fadeInDown"></h1>
             <p id="description"></p>
-            <button onclick="cover()" onmouseover="showFeedback()" onmouseout="hideFeedback()" id="casestudy">Case Study</button>
+            <button onclick="loadCase()" id="casestudy" class="animate__animated animate__fadeInLeft">Case Study</button>
         </div>
 
         <div id="portfolio">
-            <div class="project animate__animated animate__pulse" id="selling-later">
+            <div class="project" id="selling-later">
                 <img src="images/selling-later00.png" alt="Selling Later Hi Fi Dashboard">
             </div>
-            <div class="project animate__animated animate__pulse" id="xpresso">
+            <div class="project" id="xpresso">
                 <img src="images/xpresso00.png" alt="Xpresso Individual Project Page">
             </div>
-            <div class="project animate__animated animate__pulse" id="tartordle">
+            <div class="project" id="tartordle">
                 <img src="images/tartordle00.png" alt="Tartordle Screen">
             </div>
-            <div class="project animate__animated animate__pulse" id="dei">
+            <div class="project" id="dei">
                 <img src="images/dei00.png" alt="DEI Homepage">
             </div>
         </div>
@@ -53,5 +52,5 @@
     </div>  
 
 </body>
-<script src="main.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
 </html>

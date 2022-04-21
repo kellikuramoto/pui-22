@@ -31,7 +31,7 @@ h1 {
     font-family: 'Fahkwang', sans-serif;
     font-weight: bold;
     font-size: 72px;
-    color: #7B9741;
+    /* color: #7B9741; */
 }
 
 .content {
@@ -102,12 +102,26 @@ h1 {
 }
 
 #left{
-    width: 1%;
+    width: 100%;
     height: 100vh;
-    float: left;
     background-color: #7B9741;
-    visibility: hidden;
-    z-index: 9999;
+    z-index: 1;
+    /* position: absolute; */
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      /* display: contents; */
+    }
+    50% {
+        transform: translateX(0);
+        /* display: contents; */
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 /* ABOUT PAGE -- BODY CONTENT STYLING */
