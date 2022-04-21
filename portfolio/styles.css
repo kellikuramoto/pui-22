@@ -1,5 +1,6 @@
 * { 
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
     color: #312C30;
 }
 
@@ -16,6 +17,7 @@ nav {
 nav a {
     color: #312C30;
     text-decoration: none;
+    font-weight: 500;
 }
 
 #kuramoto {
@@ -29,7 +31,7 @@ nav a {
 /* HOME PAGE -- BODY CONTENT STYLING */
 h1 {
     font-family: 'Fahkwang', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 72px;
     /* color: #7B9741; */
 }
@@ -106,8 +108,7 @@ h1 {
     height: 100vh;
     background-color: #7B9741;
     z-index: 1;
-    /* position: absolute; */
-    animation: 1s ease-out 0s 1 slideInLeft;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
 }
 
 @keyframes slideInLeft {
@@ -226,4 +227,55 @@ h2 {
 
 #cmu .company {
     color: #A6192E;
+}
+
+/* CASE PAGE -- BODY CONTENT STYLING */
+#cover {
+    position: relative;
+    top: -160px;
+    left: 550px;
+}
+
+#description {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 70%;
+    float: left;
+}
+
+#description h3 {
+    font-family: 'Fahkwang', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    padding-bottom: 40px;
+}
+
+#description p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#roles {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 30%;
+    float: left;
+}
+
+#roles h4 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 100px;
+    margin: 0px;
+}
+
+#roles p {
+    font-size: 24px;
+    font-weight: 300;
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+
+#prototype {
+    margin: auto;
 }

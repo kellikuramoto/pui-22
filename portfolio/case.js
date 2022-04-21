@@ -44,8 +44,7 @@ function loadCaseInfo() {
 	let currentCase = localStorage.getItem('Case');
 	document.getElementById('left').backgroundColor = projects[currentCase].accent;
 
-	document.getElementsByTagName('h1')[0].innerHTML = projects[currentCase].name;
-	document.getElementsByTagName('h1')[0].style.fontSize = '96px';
+	document.getElementsByTagName('h1')[0].style.fontSize = '72px';
 	document.getElementsByTagName('h1')[0].style.color = projects[currentCase].background;
 	document.getElementsByTagName('h1')[0].style.paddingLeft = '100px';
 
@@ -58,6 +57,5 @@ function loadCaseInfo() {
 		document.getElementById('about').style.color = '#F9F9F9';
 	}
 
-	document.getElementById("cover").src = projects[currentCase].cover;
-
+	document.getElementById("cover").setAttribute('src', projects[currentCase].cover);
 }
