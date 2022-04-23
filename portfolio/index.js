@@ -42,7 +42,7 @@ let projects = [sellinglater, xpresso, tartordle, dei];
 /* HOME PAGE -- FUNCTIONS */
 let currentFrame = 0;
 
-// let div = document.getElementById('portfolio');
+let div = document.getElementById('portfolio');
 
 div.addEventListener('scroll', function() {
 	var element = document.querySelector('#selling-later');

@@ -362,8 +362,7 @@ h2 {
     float: left;
 }
 
-#iterations-nav img {
-    width: 100%;
-    height: auto;
-    padding: 50px;
+#iterations-nav {
+    font-weight: 500;
+    padding-top: 20px;
 }
