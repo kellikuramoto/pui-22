@@ -236,6 +236,27 @@ h2 {
     left: 550px;
 }
 
+.case-menu {
+    width: 25%;
+    float: left;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.case-menu li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    left: -40px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.case-menu a {
+    text-decoration: none;
+}
+
 #case-description {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -278,4 +299,71 @@ h2 {
 
 #prototype {
     margin: auto;
+}
+
+.process {
+    width: 75%;
+    float: right;
+}
+
+.process-step {
+    font-size: 24px;
+    margin-bottom: 100px;
+    display: block;
+}
+
+.process-heading {
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.process-stat {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#stat {
+    font-size: 72px;
+    color: #7B9741;
+}
+
+#stat-description {
+    text-align: left;
+    padding-left: 10px;
+}
+
+#problems {
+    background-color: #F1F0F0;
+    border-radius: 25px;
+    width: 36%;
+    float: left;
+    padding: 40px;
+}
+
+#problems ul, #solutions ul {
+    display: inline;
+}
+
+#solutions {
+    background-color: #F1F0F0;
+    border-radius: 25px;
+    width: 36%;
+    float: left;
+    padding: 40px;
+}
+
+#arrow {
+    display: inline;
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+}
+
+#iterations-nav img {
+    width: 100%;
+    height: auto;
+    padding: 50px;
 }
