@@ -58,6 +58,18 @@ function loadCaseInfo() {
 	}
 
 	document.getElementById("cover").setAttribute('src', projects[currentCase].cover);
+
+	nextCase = currentCase + 1;
+	if (currentCase != projects.length) {
+		console.log(projects[nextCase].name);
+		document.getElementById("next-project-name").innerText = projects[nextCase].name;
+		document.getElementById("next-project-name").style.color = projects[nextCase].background;
+	}
+	else {
+		document.getElementById("next-project-name").innerText = projects[0].name;
+		document.getElementById("next-project-name").style.color = projects[0].background;
+	}
+
 }
 
 let currentCase = localStorage.getItem('Case');

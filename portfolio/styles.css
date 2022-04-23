@@ -309,7 +309,7 @@ h2 {
 .process-step {
     font-size: 24px;
     margin-bottom: 100px;
-    display: block;
+    float: left;
 }
 
 .process-heading {
@@ -359,10 +359,31 @@ h2 {
     width: 5%;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 100px;
     float: left;
 }
 
 #iterations-nav {
+    float: left;
+}
+
+#iterations-nav p {
+    display: block;
     font-weight: 500;
     padding-top: 20px;
+}
+
+.iteration-subtitle {
+    font-size: 14px;
+    text-align: center;
+}
+
+.next-project {
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#next-project-name {
+    font-family: 'Fahkwang', sans-serif;
 }
