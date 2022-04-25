@@ -516,3 +516,34 @@ h2 {
     max-width: 100%;
     height: auto;
 }
+
+/* TARTORDLE PAGE -- BODY CONTENT STYLING */
+#tartordle-left{
+    width: 100%;
+    height: 100vh;
+    background-color: #C3354A;
+    z-index: 1;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
+}
+
+#tartordle-title {
+    color: #FFFFFF;
+    padding-left: 200px;
+    font-size: 72px;
+
+}
+
+#tartordle-cover {
+    position: relative;
+    top: -160px;
+    left: 650px;
+}
+
+#tartordle-left nav a {
+    color: #FFFFFF;
+}
+
+#tartordle-final {
+    max-width: 100%;
+    height: auto;
+}
