@@ -41,24 +41,6 @@ let projects = [sellinglater, xpresso, tartordle, dei];
 
 
 function loadCaseInfo() {
-	let currentCase = localStorage.getItem('Case');
-	document.getElementById('left').backgroundColor = projects[currentCase].accent;
-
-	document.getElementsByTagName('h1')[0].style.fontSize = '72px';
-	document.getElementsByTagName('h1')[0].style.color = projects[currentCase].background;
-	document.getElementsByTagName('h1')[0].style.paddingLeft = '100px';
-
-	if ((currentCase == 1) || (currentCase == 2)) {
-		document.getElementById('kuramoto').style.color = projects[currentCase].accent;
-		document.getElementById('about').style.color = projects[currentCase].accent;
-	}
-	else {
-		document.getElementById('kuramoto').style.color = '#F9F9F9';
-		document.getElementById('about').style.color = '#F9F9F9';
-	}
-
-	document.getElementById("cover").setAttribute('src', projects[currentCase].cover);
-
 	nextCase = currentCase + 1;
 	if (currentCase != projects.length) {
 		console.log(projects[nextCase].name);

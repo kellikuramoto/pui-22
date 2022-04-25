@@ -104,14 +104,6 @@ h1 {
     height: 16px; 
 }
 
-#left{
-    width: 100%;
-    height: 100vh;
-    background-color: #7B9741;
-    z-index: 1;
-    animation: 1.5s ease-out 0s 1 slideInLeft;
-}
-
 @keyframes slideInLeft {
     0% {
       transform: translateX(-100%);
@@ -231,12 +223,6 @@ h2 {
 }
 
 /* CASE PAGE -- BODY CONTENT STYLING */
-#cover {
-    position: relative;
-    top: -160px;
-    left: 550px;
-}
-
 .case-menu {
     width: 25%;
     float: left;
@@ -389,8 +375,34 @@ h2 {
     font-family: 'Fahkwang', sans-serif;
 }
 
-/* XPRESSO PAGE -- BODY CONTENT STYLING */
 
+/* SELLING LATER PAGE -- BODY CONTENT STYLING */
+#sellinglater-left{
+    width: 100%;
+    height: 100vh;
+    background-color: #7B9741;
+    z-index: 1;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
+}
+
+#sellinglater-title {
+    color: #F9F9F9;
+    padding-left: 100px;
+    font-size: 72px;
+
+}
+
+#sellinglater-cover {
+    position: relative;
+    top: -160px;
+    left: 550px;
+}
+
+#sellinglater-left nav a {
+    color: #F9F9F9;
+}
+
+/* XPRESSO PAGE -- BODY CONTENT STYLING */
 #xpresso-left{
     width: 100%;
     height: 100vh;
@@ -427,9 +439,7 @@ h2 {
 .process-changes th {
     padding: 15px;
     background: #F1F0F0;
-    /* border-radius: 25px; */
 }
-
 
 .process-changes .design {
     padding-top: 20px;

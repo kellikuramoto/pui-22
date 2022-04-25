@@ -58,7 +58,6 @@ function loadCaseInfo() {
 let currentCase = localStorage.getItem('Case');
 
 let div = document.getElementsByClassName('process')[0];
-console.l
 
 div.addEventListener('scroll', function() {
 	// let currentCase = localStorage.getItem('Case');
