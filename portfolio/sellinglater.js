@@ -39,21 +39,6 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-
-function loadCaseInfo() {
-	nextCase = currentCase + 1;
-	if (currentCase != projects.length) {
-		console.log(projects[nextCase].name);
-		document.getElementById("next-project-name").innerText = projects[nextCase].name;
-		document.getElementById("next-project-name").style.color = projects[nextCase].background;
-	}
-	else {
-		document.getElementById("next-project-name").innerText = projects[0].name;
-		document.getElementById("next-project-name").style.color = projects[0].background;
-	}
-
-}
-
 let currentCase = localStorage.getItem('Case');
 
 let div = document.getElementById('process');
@@ -109,3 +94,7 @@ div.addEventListener('scroll', function() {
 		document.getElementById('final-prototype-link').style.fontWeight = '600';
 	}
 });
+
+function loadNext() {
+	window.location = 'xpresso.html';
+}

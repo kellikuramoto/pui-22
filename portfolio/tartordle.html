@@ -9,13 +9,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+    <script src="tartordle.js" type="text/javascript"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;600&family=Inter:wght@300;@400;500;600;800&display=swap" rel="stylesheet">
 
 </head>
 
-<body onload="loadCaseInfo()">
+<body>
     <div id="tartordle-left">
         <nav>
             <a id="kuramoto" href="index.html">HOME</a>
@@ -137,13 +139,12 @@
                 </div>
             </div>
 
-            <div class="next-project">
+            <div onclick="loadNext()" class="next-project">
                 <p>NEXT PROJECT</p>
-                <p id="next-project-name"></p>
+                <p id="tartordle-next" class="next-project-name">DEI</p>
             </div>
         </div>
     </div>
 
 </body>
-<script src="tartordle.js" type="text/javascript"></script>
 </html>

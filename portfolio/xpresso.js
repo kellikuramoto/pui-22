@@ -39,22 +39,6 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-
-function loadCaseInfo() {
-	let currentCase = localStorage.getItem('Case');
-
-	nextCase = currentCase + 1;
-	if (currentCase != projects.length) {
-		console.log(projects[nextCase].name);
-		document.getElementById("next-project-name").innerText = projects[nextCase].name;
-		document.getElementById("next-project-name").style.color = projects[nextCase].background;
-	}
-	else {
-		document.getElementById("next-project-name").innerText = projects[0].name;
-		document.getElementById("next-project-name").style.color = projects[0].background;
-	}
-}
-
 let currentCase = localStorage.getItem('Case');
 
 let div = document.getElementsByClassName('process')[0];
@@ -133,4 +117,8 @@ div.addEventListener('scroll', function() {
 
 function load() {
 	window.open('https://kellikuramoto.github.io/pui-22/homework_6b/', '_blank');
+}
+
+function loadNext() {
+	window.location = 'tartordle.html';
 }
