@@ -393,7 +393,6 @@ h2 {
     color:#A6192E;
 }
 
-
 /* SELLING LATER PAGE -- BODY CONTENT STYLING */
 #sellinglater-left{
     width: 100%;
@@ -541,6 +540,11 @@ h2 {
     height: auto;
 }
 
+#dei-final {
+    max-width: 100%;
+    height: auto;
+}
+
 /* TARTORDLE PAGE -- BODY CONTENT STYLING */
 #tartordle-left{
     width: 100%;
@@ -552,15 +556,14 @@ h2 {
 
 #tartordle-title {
     color: #FFFFFF;
-    padding-left: 200px;
+    padding-left: 275px;
     font-size: 72px;
-
 }
 
 #tartordle-cover {
     position: relative;
-    top: -160px;
-    left: 650px;
+    top: -140px;
+    left: 620px;
 }
 
 #tartordle-left nav a {
@@ -577,4 +580,39 @@ h2 {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* DEI PAGE -- BODY CONTENT STYLING */
+#dei-left{
+    width: 100%;
+    height: 100vh;
+    background-color: #A6192E;
+    z-index: 1;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
+}
+
+#dei-title {
+    color: #FFFFFF;
+    padding-left: 100px;
+    font-size: 72px;
+}
+
+#dei-cover {
+    position: relative;
+    top: -160px;
+    left: 650px;
+}
+
+#dei-left nav a {
+    color: #FFFFFF;
+}
+
+.dei-personas {
+    padding: 20px;
+    width: 28%;
+}
+
+.dei-design {
+    padding: 20px;
+    width: 45%;
 }
