@@ -49,7 +49,6 @@ div.addEventListener('scroll', function() {
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		console.log("Selling Later");
 		currentFrame = 0;
 		loadInfo()
 	}

@@ -285,7 +285,7 @@ h2 {
     margin: auto;
 }
 
-.process {
+#process {
     width: 75%;
     float: right;
 }
@@ -391,6 +391,10 @@ h2 {
 
 #tartordle-next {
     color:#A6192E;
+}
+
+#dei-next {
+    color:#7B9741;
 }
 
 /* SELLING LATER PAGE -- BODY CONTENT STYLING */

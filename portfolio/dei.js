@@ -39,79 +39,115 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-let currentCase = localStorage.getItem('Case');
-
-let div = document.getElementsByClassName('process')[0];
-
-div.addEventListener('scroll', function() {
-	// let currentCase = localStorage.getItem('Case');
-	console.log("Parallel Protoyping");
-
-	var element = document.querySelector('#parallel-prototyping');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#semi-structured');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('semi-structured-link').style.color = '#A6192E'
+		document.getElementById('semi-structured-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('semi-structured-link').style.color = '#312C30'
+		document.getElementById('semi-structured-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("Hifi");
-	var element = document.querySelector('#hi-fi');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#personas');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('personas-link').style.color = '#A6192E'
+		document.getElementById('personas-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('personas-link').style.color = '#312C30'
+		document.getElementById('personas-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("HE");
-
-	var element = document.querySelector('#heuristic-evaluation');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#testing-design');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('testing-design-link').style.color = '#A6192E'
+		document.getElementById('testing-design-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('testing-design-link').style.color = '#312C30'
+		document.getElementById('testing-design-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("BUILD");
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#user-needs');
+	var position = element.getBoundingClientRect();
 
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('user-needs-link').style.color = '#A6192E'
+		document.getElementById('user-needs-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('user-needs-link').style.color = '#312C30'
+		document.getElementById('user-needs-link').style.fontWeight = '300';
+	}
+});
+
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#build-website');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('build-website-link').style.color = '#A6192E'
+		document.getElementById('build-website-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('build-website-link').style.color = '#312C30'
+		document.getElementById('build-website-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("FINAL");
-
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#final-website');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('final-website-link').style.color = '#A6192E'
+		document.getElementById('final-website-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('final-website-link').style.color = '#312C30'
+		document.getElementById('final-website-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("CONCLUSION");
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#client-feedback');
+	var position = element.getBoundingClientRect();
 
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('client-feedback-link').style.color = '#A6192E'
+		document.getElementById('client-feedback-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('client-feedback-link').style.color = '#312C30'
+		document.getElementById('client-feedback-link').style.fontWeight = '300';
+	}
+});
+
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#conclusion');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('conclusion-link').style.color = '#A6192E'
+		document.getElementById('conclusion-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('conclusion-link').style.color = '#312C30'
+		document.getElementById('conclusion-link').style.fontWeight = '300';
 	}
 });
 
