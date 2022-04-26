@@ -41,16 +41,21 @@ let projects = [sellinglater, xpresso, tartordle, dei];
 
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#current-state');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#7B9741';
-		document.getElementById('current-state-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('current-state-link').style.color = '#7B9741'
+			document.getElementById('current-state-link').style.fontWeight = '600';
+    } 
 	else {
-		document.getElementById('current-state-link').style.color = '#312C30';
+		document.getElementById('current-state-link').style.color = '#312C30'
 		document.getElementById('current-state-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {
@@ -69,16 +74,21 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#problems-solutions');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('problems-solutions-link').style.color = '#7B9741';
-		document.getElementById('problems-solutions-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('problems-solutions-link').style.color = '#7B9741'
+			document.getElementById('problems-solutions-link').style.fontWeight = '600';
+    } 
 	else {
-		document.getElementById('problems-solutions-link').style.color = '#312C30';
+		document.getElementById('problems-solutions-link').style.color = '#312C30'
 		document.getElementById('problems-solutions-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {

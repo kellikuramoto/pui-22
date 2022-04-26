@@ -69,16 +69,21 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#heuristic-evaluation');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if (position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('heuristic-evaluation-link').style.color = '#A38979';
-		document.getElementById('heuristic-evaluation-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('heuristic-evaluation-link').style.color = '#A38979'
+			document.getElementById('heuristic-evaluation-link').style.fontWeight = '600';
+    } 
 	else {
-		document.getElementById('heuristic-evaluation-link').style.color = '#312C30';
+		document.getElementById('heuristic-evaluation-link').style.color = '#312C30'
 		document.getElementById('heuristic-evaluation-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {
@@ -97,16 +102,21 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#final-website');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('final-website-link').style.color = '#A38979'
-		document.getElementById('final-website-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('final-website-link').style.color = '#A38979'
+			document.getElementById('final-website-link').style.fontWeight = '600';
+    } 
 	else {
 		document.getElementById('final-website-link').style.color = '#312C30'
 		document.getElementById('final-website-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {

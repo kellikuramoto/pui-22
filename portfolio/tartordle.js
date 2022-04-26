@@ -55,16 +55,21 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#accessibility');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if (position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('accessibility-link').style.color = '#C3354A'
-		document.getElementById('accessibility-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('accessibility-link').style.color = '#C3354A'
+			document.getElementById('accessibility-link').style.fontWeight = '600';
+    } 
 	else {
-		document.getElementById('accessibility-link').style.color = '#312C30';
+		document.getElementById('accessibility-link').style.color = '#312C30'
 		document.getElementById('accessibility-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {
@@ -81,18 +86,24 @@ window.addEventListener('scroll', function() {
 	}
 });
 
+
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#final-game');
-	var position = element.getBoundingClientRect();
+    var bounding = element.getBoundingClientRect();
+	var elementHeight = element.offsetHeight;
+	var elementWidth = element.offsetWidth;
 
-	if (position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('final-game-link').style.color = '#C3354A'
-		document.getElementById('final-game-link').style.fontWeight = '600';
-	}
+    if (bounding.top >= -elementHeight 
+        && bounding.left >= -elementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + elementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + elementHeight) {
+			document.getElementById('final-game-link').style.color = '#C3354A'
+			document.getElementById('final-game-link').style.fontWeight = '600';
+    } 
 	else {
-		document.getElementById('final-game-link').style.color = '#312C30';
+		document.getElementById('final-game-link').style.color = '#312C30'
 		document.getElementById('final-game-link').style.fontWeight = '300';
-	}
+    }
 });
 
 window.addEventListener('scroll', function() {
@@ -108,6 +119,7 @@ window.addEventListener('scroll', function() {
 		document.getElementById('conclusion-link').style.fontWeight = '300';
 	}
 });
+
 
 function load() {
 	window.open('https://kellikuramoto.github.io/pui-22/tartordle/', '_blank');

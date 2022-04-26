@@ -53,20 +53,6 @@ window.addEventListener('scroll', function() {
 	}
 });
 
-// window.addEventListener('scroll', function() {
-// 	var element = document.querySelector('#personas');
-// 	var position = element.getBoundingClientRect();
-
-// 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-// 		document.getElementById('personas-link').style.color = '#A6192E'
-// 		document.getElementById('personas-link').style.fontWeight = '600';
-// 	}
-// 	else {
-// 		document.getElementById('personas-link').style.color = '#312C30'
-// 		document.getElementById('personas-link').style.fontWeight = '300';
-// 	}
-// });
-
 window.addEventListener('scroll', function() {
 	var element = document.querySelector('#personas');
     var bounding = element.getBoundingClientRect();
