@@ -39,59 +39,73 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-let currentCase = localStorage.getItem('Case');
-
-let div = document.getElementById('process');
-
-div.addEventListener('scroll', function() {
-	let currentCase = localStorage.getItem('Case');
-
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#current-state');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('current-state-link').style.color = '#7B9741';
+		document.getElementById('current-state-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('current-state-link').style.color = '#312C30';
+		document.getElementById('current-state-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#iteration-testing');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('iteration-testing-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('iteration-testing-link').style.color = '#7B9741';
+		document.getElementById('iteration-testing-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('iteration-testing-link').style.color = '#312C30';
+		document.getElementById('iteration-testing-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#problems-solutions');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('problems-solutions-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('problems-solutions-link').style.color = '#7B9741';
+		document.getElementById('problems-solutions-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('problems-solutions-link').style.color = '#312C30';
+		document.getElementById('problems-solutions-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#final-prototype');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('final-prototype-link').style.color = projects[currentCase].background;
+		document.getElementById('final-prototype-link').style.color = '#7B9741';
 		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('final-prototype-link').style.color = '#312C30';
+		document.getElementById('final-prototype-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#conclusion');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('conclusion-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('conclusion-link').style.color = '#7B9741';
+		document.getElementById('conclusion-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('conclusion-link').style.color = '#312C30';
+		document.getElementById('conclusion-link').style.fontWeight = '300';
 	}
 });
 

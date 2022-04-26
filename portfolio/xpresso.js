@@ -39,59 +39,87 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-let currentCase = localStorage.getItem('Case');
-
-let div = document.getElementById('process');
-
-div.addEventListener('scroll', function() {
-	let currentCase = localStorage.getItem('Case');
-
-	var element = document.querySelector('#current-state');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#parallel-prototyping');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('parallel-prototyping-link').style.color = '#A38979';
+		document.getElementById('parallel-prototyping-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('parallel-prototyping-link').style.color = '#312C30';
+		document.getElementById('parallel-prototyping-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	var element = document.querySelector('#iteration-testing');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#hi-fi');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('iteration-testing-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('hi-fi-link').style.color = '#A38979';
+		document.getElementById('hi-fi-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('hi-fi-link').style.color = '#312C30';
+		document.getElementById('hi-fi-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	var element = document.querySelector('#problems-solutions');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#heuristic-evaluation');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('problems-solutions-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('heuristic-evaluation-link').style.color = '#A38979';
+		document.getElementById('heuristic-evaluation-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('heuristic-evaluation-link').style.color = '#312C30';
+		document.getElementById('heuristic-evaluation-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	var element = document.querySelector('#final-prototype');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#build-website');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('final-prototype-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('build-website-link').style.color = '#A38979'
+		document.getElementById('build-website-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('build-website-link').style.color = '#312C30'
+		document.getElementById('build-website-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#final-website');
+	var position = element.getBoundingClientRect();
+
+	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('final-website-link').style.color = '#A38979'
+		document.getElementById('final-website-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('final-website-link').style.color = '#312C30'
+		document.getElementById('final-website-link').style.fontWeight = '300';
+	}
+});
+
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#conclusion');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('conclusion-link').style.color = projects[currentCase].background;
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('conclusion-link').style.color = '#A38979';
+		document.getElementById('conclusion-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('conclusion-link').style.color = '#312C30';
+		document.getElementById('conclusion-link').style.fontWeight = '300';
 	}
 });
 

@@ -39,79 +39,73 @@ let dei = {
 
 let projects = [sellinglater, xpresso, tartordle, dei];
 
-
-let currentCase = localStorage.getItem('Case');
-
-let div = document.getElementsByClassName('process')[0];
-
-div.addEventListener('scroll', function() {
-	console.log("Parallel Protoyping");
-
-	var element = document.querySelector('#parallel-prototyping');
-	var position = element.getBoundingClientRect();
-
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
-	}
-});
-
-div.addEventListener('scroll', function() {
-	console.log("Hifi");
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#hi-fi');
 	var position = element.getBoundingClientRect();
 
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+		document.getElementById('hi-fi-link').style.color = '#C3354A'
+		document.getElementById('hi-fi-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('hi-fi-link').style.color = '#312C30';
+		document.getElementById('hi-fi-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("HE");
-
-	var element = document.querySelector('#heuristic-evaluation');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#accessibility');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('accessibility-link').style.color = '#C3354A'
+		document.getElementById('accessibility-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('accessibility-link').style.color = '#312C30';
+		document.getElementById('accessibility-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("BUILD");
-
-	var element = document.querySelector('#build-website');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#build-game');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('build-game-link').style.color = '#C3354A'
+		document.getElementById('build-game-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('build-game-link').style.color = '#312C30';
+		document.getElementById('build-game-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("FINAL");
-
-	var element = document.querySelector('#final-website');
+window.addEventListener('scroll', function() {
+	var element = document.querySelector('#final-game');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('final-game-link').style.color = '#C3354A'
+		document.getElementById('final-game-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('final-game-link').style.color = '#312C30';
+		document.getElementById('final-game-link').style.fontWeight = '300';
 	}
 });
 
-div.addEventListener('scroll', function() {
-	console.log("CONCLUSION");
-
+window.addEventListener('scroll', function() {
 	var element = document.querySelector('#conclusion');
 	var position = element.getBoundingClientRect();
 
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		document.getElementById('current-state-link').style.color = '#A38979'
-		document.getElementById('final-prototype-link').style.fontWeight = '600';
+	if (position.top >= 0 && position.bottom <= window.innerHeight) {
+		document.getElementById('conclusion-link').style.color = '#C3354A'
+		document.getElementById('conclusion-link').style.fontWeight = '600';
+	}
+	else {
+		document.getElementById('conclusion-link').style.color = '#312C30';
+		document.getElementById('conclusion-link').style.fontWeight = '300';
 	}
 });
 
