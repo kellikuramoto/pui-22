@@ -351,6 +351,11 @@ h2 {
     float: left;
 }
 
+#iterations-nav img {
+    max-width: 90%;
+    height: auto;
+}
+
 #iterations-nav p {
     display: block;
     font-weight: 500;
@@ -616,7 +621,186 @@ h2 {
     width: 28%;
 }
 
-.dei-design {
-    padding: 20px;
-    width: 45%;
+#dei-design-img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
+
+.dei-design {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 35%;
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #info {
+        width: 90%;
+        float: left;
+    }
+
+    #portfolio {
+        margin-top: 20px;
+        width: 90%;
+        float: left;
+        overflow-y: scroll;
+        height: 25vh;
+        scroll-snap-type: y mandatory;
+    }
+
+    #indicator {
+        margin-top: 20px;
+    }
+
+    #description {
+        font-size: 14px;
+    }
+
+    #casestudy {
+        padding: 10px 15px;
+    }
+
+    #sellinglater-left, #xpresso-left, #tartordle-left, #dei-left {
+        height: 75vh;
+    }
+
+    #sellinglater-title, #xpresso-title, #tartordle-title, #dei-title {
+        font-size: 36px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #sellinglater-cover {
+        max-width: 80%;
+        height: auto;
+        position: static;
+        padding-left: 30px;
+    }
+
+    .content {
+        max-width: 90%;
+    }
+
+    #case-description {
+        width: 100%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    #case-description h3 {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    #case-description p, #case-description u {
+        font-size: 16px;
+    }
+
+    #roles {
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    #roles h4 {
+        font-size: 18px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #roles p {
+        font-size: 14px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+
+    .case-menu {
+        display: none;
+    }
+
+    #process {
+        width: 100%;
+        float: none;
+    }
+
+    .process-step {
+        margin-bottom: 20px;
+        /* width: 100%; */
+    }
+    #problems-solutions .process-description {
+        max-width: 80%;
+    }
+
+    .process-heading {
+        font-size: 24px;
+    }
+
+    #stat {
+        font-size: 36px;
+    }
+
+    #problems, #solutions {
+        width: 90%;
+        padding: 30px;
+    }
+
+    #solutions {
+        margin-top: 10px;
+    }
+
+    #arrow {
+        display: none;
+    }
+
+    .iteration-subtitle {
+        font-size: 10px;
+    }
+    #prototype {
+        width: 267px;
+        height: 150px;
+    }
+    .next-project {
+        width: 40%;
+    }
+
+    #sellinglater-next {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* @media (max-width: 768) {
+    .text {
+      font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text {
+      font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .text {
+      font-size: 16px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .text {
+      font-size: 16px;
+    }
+} */
