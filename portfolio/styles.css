@@ -824,6 +824,21 @@ h2 {
         margin-top: 20px;
         margin-bottom: 0px;
     }
+
+     /* DEI PAGE -- BODY CONTENT STYLING */
+    .dei-personas {
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .dei-design {
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 0px;
+    }
 }
 
 /* @media (max-width: 768) {
