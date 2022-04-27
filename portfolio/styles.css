@@ -682,7 +682,7 @@ h2 {
         text-align: center;
     }
 
-    #sellinglater-cover {
+    #sellinglater-cover, #xpresso-cover, #tartordle-cover, #dei-cover {
         max-width: 80%;
         height: auto;
         position: static;
@@ -737,8 +737,18 @@ h2 {
 
     .process-step {
         margin-bottom: 20px;
-        /* width: 100%; */
     }
+
+    .next-project {
+        width: 40%;
+    }
+
+    #sellinglater-next, #xpresso-next, #tartordle-next, #dei-next {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* SELLING LATER PAGE -- BODY CONTENT STYLING */
     #problems-solutions .process-description {
         max-width: 80%;
     }
@@ -767,17 +777,52 @@ h2 {
     .iteration-subtitle {
         font-size: 10px;
     }
+
     #prototype {
         width: 267px;
         height: 150px;
     }
-    .next-project {
-        width: 40%;
+
+    /* XPRESSO PAGE -- BODY CONTENT STYLING */
+    .process-changes {
+        width: 90%;
     }
 
-    #sellinglater-next {
-        font-size: 18px;
-        padding: 10px;
+    #problems-solutions .process-description {
+        max-width: 80%;
+    }
+
+    .design-guide-color {
+        font-size: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    #heuristic-evaluation-img0 {
+        width: 200px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img1 {
+        width: 200px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img2 {
+        width: 200px;
+        height: auto;
+    }
+
+    .solution {
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    .heuristic-evaluations {
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 }
 
