@@ -341,6 +341,7 @@ h2 {
 #arrow {
     display: inline;
     width: 5%;
+    height: 5%;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 100px;
@@ -633,7 +634,7 @@ h2 {
     width: 35%;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     * {
         font-size: 14px;
     }
@@ -841,26 +842,242 @@ h2 {
     }
 }
 
-/* @media (max-width: 768) {
-    .text {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    * {
       font-size: 16px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #info {
+        width: 90%;
+        float: left;
+    }
+
+    #portfolio {
+        margin-top: 20px;
+        width: 90%;
+        float: left;
+        overflow-y: scroll;
+        height: 35vh;
+        scroll-snap-type: y mandatory;
+    }
+
+    #indicator {
+        margin-top: 20px;
+    }
+
+    #description {
+        font-size: 16px;
+    }
+
+    #sellinglater-left, #xpresso-left, #tartordle-left, #dei-left {
+        height: 100vh;
+    }
+
+    #sellinglater-title, #xpresso-title, #tartordle-title, #dei-title {
+        font-size: 48px;
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #sellinglater-cover {
+        max-width: 80%;
+        height: auto;
+        position: static;
+        padding-left: 50px;
+    }
+
+    #xpresso-cover, #tartordle-cover, #dei-cover {
+        max-width: 80%;
+        height: auto;
+        position: static;
+        padding-left: 100px;
+    }
+
+    #case-description, #roles {
+        width: 50%;
+        float: left;
+    }
+
+    #roles {
+        padding-top: 380px;
+    }
+
+    .process-step {
+        margin-bottom: 50px;
+    }
+
+    .next-project {
+        width: 30%;
+        margin-left: 300px;
+    }
+
+    #sellinglater-next, #xpresso-next, #tartordle-next, #dei-next {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    /* SELLING LATER PAGE -- BODY CONTENT STYLING */
+    #problems, #solutions {
+        width: 65%;
+        padding: 30px;
+    }
+
+    #solutions {
+        margin-top: 20px;
+    }
+
+    #arrow {
+        display: none;
+    }
+
+    #prototype {
+        width: 400px;
+        height: 225px;
+    }
+
+    /* XPRESSO PAGE -- BODY CONTENT STYLING */
+    .process-changes {
+        width: 90%;
+    }
+
+    .design-guide-color {
+        font-size: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #heuristic-evaluation-img0 {
+        width: 200px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img1 {
+        width: 200px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img2 {
+        width: 200px;
+        height: auto;
+    }
+
+    /* DEI PAGE -- BODY CONTENT STYLING */
+    .dei-personas {
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .dei-design {
+        width: 80%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 0px;
     }
 }
 
-@media (max-width: 1024px) {
-    .text {
-      font-size: 16px;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        max-width: 90%;
+    }
+
+    #portfolio {
+        margin-top: 8%;
+        width: 48%;
+        padding-right: 1%;
+        float: left;
+        overflow-y: scroll;
+        height: 34vh;
+        scroll-snap-type: y mandatory;
+    }
+    
+    #portfolio::-webkit-scrollbar {
+        display: none; 
+    }
+
+    #indicator {
+        margin-top: 8%;
+    }
+
+    #sellinglater-left, #xpresso-left, #tartordle-left, #dei-left {
+        height: 100vh;
+    }
+
+    #sellinglater-title, #xpresso-title, #tartordle-title, #dei-title {
+        padding-left: 0px;
+        text-align: center;
+    }
+
+    #sellinglater-cover, #xpresso-cover, #tartordle-cover, #dei-cover {
+        max-width: 50%;
+        height: auto;
+        position: static;
+        padding-left: 250px;
+    }
+
+    .next-project {
+        width: 30%;
+        margin-left: 400px;
+    }
+
+    /* SELLING LATER PAGE -- BODY CONTENT STYLING */
+    #problems, #solutions {
+        width: 35%;
+        padding: 30px;
+    }
+
+    #prototype {
+        width: 600px;
+        height: 300px; 
+    }
+
+    /* XPRESSO PAGE -- BODY CONTENT STYLING */
+    .design-guide-color {
+        font-size: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #heuristic-evaluation-img0 {
+        width: 300px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img1 {
+        width: 300px;
+        height: auto;
+    }
+
+    #heuristic-evaluation-img2 {
+        width: 300px;
+        height: auto;
+    }
+
+    /* DEI PAGE -- BODY CONTENT STYLING */
+    .dei-personas {
+        width: 40%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .dei-design {
+        width: 40%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 0px;
     }
 }
-
-@media (max-width: 1200px) {
-    .text {
-      font-size: 16px;
-    }
-}
-
-@media (min-width: 1201px) {
-    .text {
-      font-size: 16px;
-    }
-} */

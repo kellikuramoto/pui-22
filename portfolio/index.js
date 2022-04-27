@@ -5,7 +5,6 @@ let sellinglater = {
 	accent: '#7B9741',
 	background: '#F9F9F9',
 	indicator: 'sellinglater-indicator',
-	cover: 'images/selling-laterCASE.png'
 }
 
 let xpresso = {

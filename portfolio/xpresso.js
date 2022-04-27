@@ -134,5 +134,5 @@ window.addEventListener('scroll', function() {
 });
 
 function loadNext() {
-	window.location = 'xpresso.html';
+	window.location = 'tartordle.html';
 }
