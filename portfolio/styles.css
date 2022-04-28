@@ -1,7 +1,7 @@
 @font-face {
     font-family: Fahkwang;
     src: url(Fahkwang-Regular-400.ttf);
- }
+}
 
 * { 
     font-family: 'Inter', sans-serif;
@@ -556,9 +556,8 @@ h2 {
     height: auto;
 }
 
-#dei-final {
-    max-width: 100%;
-    height: auto;
+#xpresso-final:hover {
+    transform: scale(1.02);
 }
 
 /* TARTORDLE PAGE -- BODY CONTENT STYLING */
@@ -638,6 +637,14 @@ h2 {
     padding-left: 40px;
     padding-right: 40px;
     width: 35%;
+}
+
+#dei-final {
+    max-width: 90%;
+    height: auto;
+}
+#dei-final:hover  {
+    transform: scale(1.02);
 }
 
 @media only screen and (max-width: 480px) {
