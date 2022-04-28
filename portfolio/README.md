@@ -1,4 +1,4 @@
-Video: 
+Video: https://drive.google.com/file/d/1LvtOfGlNCkKYsBV7Qfm5qyIyHHlViFJM/view?usp=sharing 
 
 Figma: 
 https://www.figma.com/file/17LhBEDffpO7Dku0Jxj5M3/assignment-7?node-id=0%3A1 

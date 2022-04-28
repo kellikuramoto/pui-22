@@ -133,6 +133,10 @@ window.addEventListener('scroll', function() {
 	}
 });
 
+function load() {
+	window.open('https://kellikuramoto.github.io/pui-22/homework_6b/', '_blank');
+}
+
 function loadNext() {
 	window.location = 'tartordle.html';
 }
