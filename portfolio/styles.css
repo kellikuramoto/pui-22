@@ -123,7 +123,8 @@ h1 {
 
 /* ABOUT PAGE -- BODY CONTENT STYLING */
 h2 {
-    font-family: 'Fahkwang', sans-serif;
+    /* font-family: 'Fahkwang', sans-serif; */
+    font-family: Fahkwang;
     font-weight: bold;
     font-size: 72px;
     color: #312C30;
@@ -180,7 +181,8 @@ h2 {
 }
 
 .company {
-    font-family: 'Fahkwang', sans-serif;
+    /* font-family: 'Fahkwang', sans-serif; */
+    font-family: Fahkwang;
     font-size: 32px;
 }
 
@@ -255,7 +257,8 @@ h2 {
 }
 
 #case-description h3 {
-    font-family: 'Fahkwang', sans-serif;
+    /* font-family: 'Fahkwang', sans-serif; */
+    font-family: Fahkwang;
     font-weight: 600;
     font-size: 48px;
     padding-bottom: 40px;
@@ -303,7 +306,8 @@ h2 {
 }
 
 .process-heading {
-    font-family: 'Fahkwang', sans-serif;
+    /* font-family: 'Fahkwang', sans-serif; */
+    font-family: Fahkwang;
     font-size: 36px;
     font-weight: 600;
 }
@@ -389,7 +393,8 @@ h2 {
 }
 
 .next-project-name {
-    font-family: 'Fahkwang', sans-serif;
+    /* font-family: 'Fahkwang', sans-serif; */
+    font-family: Fahkwang;
     font-size: 30px;
 }
 
