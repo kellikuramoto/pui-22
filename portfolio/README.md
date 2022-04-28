@@ -14,6 +14,7 @@ Home page
 - scroll to see the four different case studies being presented
     - click on ‘Case Study’ to view in depth process of project
 - click on ‘About’ to see information about my journey in design and work history
+
 Case study
 - scroll to see process
 - click on side nav bar to view specific section of project
