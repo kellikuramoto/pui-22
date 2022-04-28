@@ -560,6 +560,24 @@ h2 {
     transform: scale(1.02);
 }
 
+#design-guide-title {
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 36px;
+    color: #361706;
+}
+
+#design-guide-subheading {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #361706;
+}
+
+#design-guide-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #361706;
+}
+
 /* TARTORDLE PAGE -- BODY CONTENT STYLING */
 #tartordle-left{
     width: 100%;
