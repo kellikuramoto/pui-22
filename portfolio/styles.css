@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Fahkwang-600;
+    font-family: Fahkwang;
     src: url(Fahkwang-600.ttf);
  }
 
@@ -37,7 +37,7 @@ nav a {
 /* HOME PAGE -- BODY CONTENT STYLING */
 h1 {
     /* font-family: 'Fahkwang', sans-serif; */
-    font-family: Fahkwang-600;
+    font-family: Fahkwang;
     font-weight: 600;
     font-size: 72px;
     /* color: #7B9741; */
