@@ -167,7 +167,7 @@ window.addEventListener('scroll', function() {
 });
 
 function load() {
-	window.open('https://kellikuramoto.github.io/dei/', '_blank');
+	window.open('https://kellikuramoto.github.io/casestudy/dei/', '_blank');
 }
 
 function loadNext() {
