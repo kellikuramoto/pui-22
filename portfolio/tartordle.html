@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kuramoto</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="tartordle.js" type="text/javascript"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;600&family=Inter:wght@300;@400;500;600;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="tartordle-left">
+        <nav>
+            <a id="kuramoto" href="index.html">HOME</a>
+            <a id="about" href="about.html">ABOUT</a>
+        </nav>
+
+        <div id="title">
+            <h1 id="tartordle-title">Tartordle</h1>
+            <img id="tartordle-cover" height="471.39" width="550" src="images/tartordleCASE.png">
+        </div>
+    </div>
+
+    <div class="content">
+            <div class="intro">
+                <div id="case-description">
+                    <h3>America’s favorite game, CMU style</h3>
+                    <p>For my Programmable User Interfaces course, we were tasked with desinging an educational interactive game for our final project.
+                    <br>
+                    <br>
+                    My friends and I have been obsessed with Wordle, so I decided to to design and implement a Carnegie Mellon version, that displays information about the word once you have guessed it. I named it, Tartordle!
+                </div>
+                <div id="roles">
+                    <h4>ROLES</h4>
+                    <p> Design <br>
+                        Wireframing <br>
+                        Prototyping <br>
+                        Web Development
+                    </p>
+
+                    <h4>CLIENT</h4>
+                    <p> Concept Project
+                    </p>
+
+                    <h4>TIME</h4>
+                    <p> April 2022
+                    </p>
+                </div>
+            </div>
+
+            <div class="case-menu">
+                <ul>
+                    <li><a id="hi-fi-link" href="#hi-fi">HI FI PROTOTYPE</a></li>
+                    <li><a id="accessibility-link" href="#accessibility">ACCESSIBILITY</a></li>
+                    <li><a id="build-game-link" href="#build-game">BUILDING THE GAME</a></li>
+                    <li><a id="final-game-link" href="#final-game">FINAL GAME</a></li>
+                    <li><a id="conclusion-link" href="#conclusion">CONCLUSION</a></li>
+                 </ul>
+            </div>
+
+            <div id="process">
+                <div class="process-step" id="hi-fi">
+                    <p class="process-num">01</p>
+                    <h3 class="process-heading">Hi-Fi Prototype</h3>
+                    <p class="process-description">
+                        Since I am basing my project off of Wordle (which already has an established design). I started by designing my own hi-fi prototype very similar to NYTimes’ Wordle with the exception of some color changes. 
+                        <br>
+                        <br>
+                        In order to keep in line with the “CMU Brand”, I looked up Carnegie Mellon’s Brand Identity and pulled the specific green, yellow, and red shades. 
+                        <br>
+                        <br>
+                        Additionally, for this project we had to implement animations throughout our application. I used animate.css animations for the flipping over of tiles, very similar to Wordle’s.
+                    </p>
+                </div>
+
+                <div class="process-step" id="accessibility">
+                    <p class="process-num">02</p>
+                    <h3 class="process-heading">Accessibility</h3>
+                    <p class="process-description">
+                        As a designer, I have begun to see the impact of inaccessible designs on the web for many people who might be sight impaired. Once, my close friend sent me his Wordle, I was confused at first because his colors were blue and orange. He explained to me that because he was partly colorblind, the blue and orange were the easiest for his eyes to contrast. 
+                        <br>
+                        <br>
+                        In my own implementation of Tartordle, I made sure to add in a settings button where the user could switch between light mode, dark mode, colorblind mode, or any combination in between in order to make my game as accessible as possible.
+                        <img width="300" height="360.41" id="tartordle-accesibility" src="images/tartordleACCESSIBLE.png" alt="Modes of Tartordle">
+
+                        Other steps I took to accessibility include:
+                        <ul>
+                            <li>Alt text for images</li>
+                            <li>Indicate primary language for each page</li>
+                            <li>Reflecting the reading order in the code order</li>
+                            <li>Responsive media queries</li>
+                            <li>Interactive elements are keyboard accessible</li>
+
+                        </ul>
+                    </p>                     
+                </div>
+
+                <div class="process-step" id="build-game">
+                    <p class="process-num">03</p>
+                    <h3 class="process-heading">Building the Game</h3>
+                    <p class="process-description">
+                        Since the game will show additional information about the world once the user has guessed the word. I decided to store all of the information, including the description, map, and website, for each word in an object and store the objects in an array. At the start of each game, I would randomly pick a word from the array of objects.
+                        <br>
+                        <br>
+                        I dynamically updated the page using javascript and the css attribute display: none; to make sure the information did not take up any space on the page.
+                        <br>
+                        <br>
+                        I also added click attributes to the keyboard on the screen, as well as user keyboard functionality when guessing the letters. 
+                        Before coding my website, I ran a usability test, heuristic evaluation to ensure that my website had an easy to understand, intuitive UI. During my heuristic evaluation I ran into 3 errors which I corrected. 
+                    </p>
+                </div>     
+
+                <div class="process-step" id="final-game">
+                    <p class="process-num">04</p>
+                    <h3 class="process-heading">Final Game</h3>
+                    <p class="process-description">
+                        <img onclick="load()" id="tartordle-final" src="images/tartordleFINAL.png">
+                    </p>                      
+                </div>      
+
+                <div class="process-step" id="conclusion">
+                    <p class="process-num">05</p>
+                    <h3 class="process-heading">Conclusion</h3>
+                    <p class="process-description">
+                        This was my first game that I created by myself, using HTML, CSS, and Javascript. While I ran into some issues because I am used to creating applications using Java, which is an Object Oriented Programming language. It was still fun nonetheless.
+                        <br>
+                        <br>
+                        I hope you enjoy playing and learned something new about Carnegie Mellon!
+                    </p>                      
+                </div>
+            </div>
+
+            <div onclick="loadNext()" class="next-project">
+                <p>NEXT PROJECT</p>
+                <p id="tartordle-next" class="next-project-name">DEI</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
